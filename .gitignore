@@ -1,0 +1,4 @@
+# Ignore Python virtual environment
+env/
+.env
+kenyalaw_Cache/
