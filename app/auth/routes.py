@@ -34,7 +34,7 @@ def register_user(user_data: UserCreate, db: Session = Depends(get_db)):
         lsk_number=user_data.lsk_number,
         specialization=user_data.specialization,
         years_of_experience=user_data.years_of_experience,
-        status=UserStatus.PENDING
+        status=UserStatus.ACTIVE
     )
     
     db.add(db_user)
