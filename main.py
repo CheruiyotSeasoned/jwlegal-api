@@ -1,5 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.requests import Request
+from starlette.responses import Response
+
 from app.database import engine, Base
 import os
 import sys
@@ -19,14 +23,31 @@ app = FastAPI(
     version="1.0.0"
 )
 
+
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8080", "http://192.168.1.135:8080",""],
+    allow_origins=[
+        "http://localhost:8080",
+        "http://192.168.1.135:8080",
+        "https://legalbuddy.aiota.online",  # ✅ only domain, no path
+    ],
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"],  # or ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+    allow_headers=["*"],  # or ["Authorization", "Content-Type"]
 )
+#https://legalbuddyapi.aiota.online/auth/google-signup
+#https://legalbuddyapi.aiota.online/auth/google-signup
+#
+# --- Add middleware for COOP/COEP headers ---
+class SecurityHeadersMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request: Request, call_next):
+        response: Response = await call_next(request)
+        response.headers["Cross-Origin-Opener-Policy"] = "same-origin-allow-popups"
+        response.headers["Cross-Origin-Embedder-Policy"] = "unsafe-none"
+        return response
+
+app.add_middleware(SecurityHeadersMiddleware)
 
 # Include routers
 app.include_router(auth_router)

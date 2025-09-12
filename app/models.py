@@ -231,6 +231,9 @@ class User(Base):
     email_verified_at = Column(DateTime)
     phone_verified_at = Column(DateTime)
     profile_completed = Column(Boolean, default=False)
+    auth_provider = Column(String(50), default="local")   # "local", "google", etc.
+    google_id = Column(String(50), unique=True, index=True)  # sub from Google
+    google_refresh_token = Column(Text)  # only if you need Gmail API access
     
     # Relationships
     profile = relationship("UserProfile", back_populates="user", uselist=False, cascade="all, delete-orphan")

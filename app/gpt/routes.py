@@ -1,7 +1,10 @@
 from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel, Field
 from typing import Optional, List, Dict, Any
+from fastapi.responses import StreamingResponse
 import openai
+from fastapi import FastAPI, File, UploadFile
+from openai import OpenAI
 import os
 from dotenv import load_dotenv
 from datetime import datetime
@@ -15,7 +18,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 # Setup logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-
+client = OpenAI()
 # Create router
 router = APIRouter(prefix="/legal", tags=["kenya-legal"])
 
@@ -184,53 +187,60 @@ IMPORTANT: Always specify that this is general legal information and not formal 
 
 @router.post("/chat")
 async def legal_chat(req: ChatRequest):
-    """Main chat endpoint for legal queries"""
+    """Main chat endpoint for legal queries with streaming"""
     try:
-        # Get appropriate legal context
+        # Build system prompt
         system_prompt = enhance_legal_prompt("", req.message, req.legal_area)
-        
-        # Build conversation history
+
+        # Construct messages
         messages = [{"role": "system", "content": system_prompt}]
-        
-        # Add context history if provided
         if req.context_history:
-            for msg in req.context_history[-5:]:  # Keep last 5 exchanges
-                messages.append(msg)
-        
-        # Add current user message
+            messages.extend(req.context_history[-5:])
         messages.append({"role": "user", "content": req.message})
-        
-        # Call OpenAI API with model fallback
+
         model = get_available_model()
-        response = openai.chat.completions.create(
-            model=model,
-            messages=messages,
-            max_tokens=1000,  # Increased for comprehensive legal responses
-            temperature=0.3,  # Lower temperature for more accurate legal information
-            top_p=0.9,
-            frequency_penalty=0.1,
-            presence_penalty=0.1
+
+        # Create generator for streaming
+        def generate():
+            stream = client.chat.completions.create(
+                model=model,
+                messages=messages,
+                max_tokens=1000,
+                temperature=0.3,
+                top_p=0.9,
+                frequency_penalty=0.1,
+                presence_penalty=0.1,
+                stream=True,  # << streaming enabled
+            )
+
+            for event in stream:
+                delta = event.choices[0].delta
+                if delta and delta.content:
+                    yield delta.content
+
+        # Return StreamingResponse instead of JSON
+        return StreamingResponse(
+            generate(),
+            media_type="text/plain"
         )
-        
-        reply = response.choices[0].message.content
-        
-        # Log the interaction (without sensitive data)
-        logger.info(f"Legal query processed - Area: {req.legal_area}, Query length: {len(req.message)}")
-        
-        return {
-            "reply": reply,
-            "legal_area": req.legal_area,
-            "timestamp": datetime.now().isoformat(),
-            "disclaimer": "This response provides general legal information only and does not constitute formal legal advice. Please consult with a qualified Kenyan lawyer for specific legal matters."
-        }
-        
-    except openai.APIError as e:
-        logger.error(f"OpenAI API error: {str(e)}")
-        raise HTTPException(status_code=502, detail=f"AI service error: {str(e)}")
+
     except Exception as e:
         logger.error(f"Unexpected error: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal server error")
-
+@router.post("/api/transcribe")
+async def transcribe(file: UploadFile = File(...)):
+    # Save uploaded file temporarily
+    audio_bytes = await file.read()
+    with open("temp_audio.webm", "wb") as f:
+        f.write(audio_bytes)
+    
+    # Call OpenAI Whisper
+    transcript = openai.audio.transcriptions.create(
+        model="whisper-1",
+        file=open("temp_audio.webm", "rb")
+    )
+    
+    return {"text": transcript.text}
 @router.post("/research")
 async def legal_research(req: LegalQuery):
     """Specialized endpoint for focused legal research"""
