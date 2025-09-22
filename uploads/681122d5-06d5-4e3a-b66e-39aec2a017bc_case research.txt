@@ -1,0 +1,17 @@
+Employee: John Doe
+Position: Software Engineer
+Date of Termination: 5th August 2024
+
+Summary of Facts:
+John Doe was employed on a 3-year fixed-term contract starting January 2023.
+He was terminated without notice or hearing, allegedly due to poor performance.
+No warning letters or performance improvement plans were issued.
+John had consistently positive performance appraisals before termination.
+
+Key Legal Question:
+Was the termination lawful under the Employment Act, 2007 of Kenya?
+
+Relevant Considerations:
+- Sections 35, 41, 43 and 45 of the Employment Act
+- Procedural fairness requirements
+- Right to be heard before termination

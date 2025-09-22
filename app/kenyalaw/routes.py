@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, HTTPException, Query, Depends,BackgroundTasks
 from typing import List, Dict, Optional, Any
 import requests
 import time
@@ -7,8 +7,8 @@ import os
 from dotenv import load_dotenv
 import re
 import hashlib
+import uuid
 from datetime import datetime, timedelta
-from pydantic import BaseModel
 from bs4 import BeautifulSoup
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -19,9 +19,22 @@ from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 import asyncio
 import logging
+import openai
+from fastapi.responses import JSONResponse
+from contextlib import asynccontextmanager
+from openai import OpenAI
 from openai import AsyncOpenAI
+from qdrant_client import QdrantClient
+from qdrant_client.http import models
+from pydantic import BaseModel, Field
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+import tiktoken
+from sentence_transformers import SentenceTransformer
 
-
+qdrant = QdrantClient(
+    host=os.getenv("QDRANT_HOST", "localhost"),
+    port=int(os.getenv("QDRANT_PORT", "6333"))
+)
 # Download required NLTK data
 try:
     nltk.data.find('tokenizers/punkt')
@@ -40,7 +53,70 @@ client = AsyncOpenAI(api_key=api_key)
 # Setup logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+class DocumentRequest(BaseModel):
+    doc_id: str = Field(..., description="Document ID to process")
 
+class QueryRequest(BaseModel):
+    query: str = Field(..., min_length=1, max_length=1000, description="Legal question")
+    limit: int = Field(default=5, ge=1, le=20, description="Number of results to return")
+    min_score: float = Field(default=0.3, ge=0.0, le=1.0, description="Minimum similarity score")
+
+class Source(BaseModel):
+    doc_id: str
+    title: str
+    court: Optional[str] = None
+    date: Optional[str] = None
+    citations: Optional[List[str]] = None
+    snippet: str
+    source_html_url: Optional[str] = None
+    score: float
+
+class RAGResponse(BaseModel):
+    answer: str
+    sources: List[Source]
+    query: str
+    processing_time: float
+    tokens_used: Optional[int] = None
+
+# Configuration
+class RAGConfig:
+    COLLECTION_NAME = "kenya_cases"
+    CHUNK_SIZE = 400
+    CHUNK_OVERLAP = 80
+    MAX_CONTEXT_TOKENS = 8000
+    CHAT_MODEL = "gpt-4o-mini"  # Only for chat completion
+    MAX_RETRIES = 3
+    RATE_LIMIT_DELAY = 1.0
+    
+    # Embedding model options
+    EMBEDDING_MODELS = {
+        "bge-large": {"name": "BAAI/bge-large-en-v1.5", "size": 1024},
+        "bge-base": {"name": "BAAI/bge-base-en-v1.5", "size": 768},
+        "bge-small": {"name": "BAAI/bge-small-en-v1.5", "size": 384},
+        "all-mpnet": {"name": "all-mpnet-base-v2", "size": 768},
+        "all-miniLM": {"name": "all-MiniLM-L6-v2", "size": 384},
+        "nomic": {"name": "nomic-ai/nomic-embed-text-v1", "size": 768},
+        "e5-large": {"name": "intfloat/e5-large-v2", "size": 1024},
+        "e5-base": {"name": "intfloat/e5-base-v2", "size": 768},
+    }
+    
+    # Choose your embedding model here
+    SELECTED_MODEL = "bge-base"  # Good balance of quality and speed
+    
+    @property
+    def VECTOR_SIZE(self):
+        return self.EMBEDDING_MODELS[self.SELECTED_MODEL]["size"]
+    
+    @property
+    def EMBEDDING_MODEL_NAME(self):
+        return self.EMBEDDING_MODELS[self.SELECTED_MODEL]["name"]
+
+config = RAGConfig()
+
+# Initialize embedding model
+logger.info(f"Loading embedding model: {config.EMBEDDING_MODEL_NAME}")
+embedding_model = SentenceTransformer(config.EMBEDDING_MODEL_NAME)
+logger.info(f"Embedding model loaded. Vector size: {config.VECTOR_SIZE}")
 
 # Pydantic models for request/response
 class SearchRequest(BaseModel):
@@ -1487,3 +1563,574 @@ async def get_system_info():
         }
     except Exception as e:
         return {"error": str(e)}
+def init_clients():
+    """Initialize Qdrant and OpenAI clients with error handling."""
+    try:
+        qdrant = QdrantClient(
+            host="localhost",  # Configure as needed
+            port=6333,
+            timeout=30.0
+        )
+        
+        # Test connection
+        qdrant.get_collections()
+        logger.info("Qdrant client initialized successfully")
+        
+        # Initialize OpenAI client
+        openai_client = AsyncOpenAI(api_key=api_key)  # Assumes API key is set in environment
+        logger.info("OpenAI client initialized successfully")
+        
+        return qdrant, openai_client
+        
+    except Exception as e:
+        logger.error(f"Failed to initialize clients: {str(e)}")
+        raise
+
+qdrant, openai_client = init_clients()
+
+# Initialize tokenizer for token counting
+try:
+    tokenizer = tiktoken.encoding_for_model(config.CHAT_MODEL)
+except KeyError:
+    tokenizer = tiktoken.get_encoding("cl100k_base")
+
+router = APIRouter(prefix="/api/v1/rag", tags=["Legal RAG"])
+
+@asynccontextmanager
+async def lifespan(app):
+    """Application lifespan events."""
+    # Startup
+    await init_collection()
+    yield
+    # Shutdown
+    logger.info("Shutting down RAG service")
+
+async def init_collection():
+    """Initialize Qdrant collection with proper error handling."""
+    try:
+        # Check if collection exists
+        collections = qdrant.get_collections()
+        collection_exists = any(
+            col.name == config.COLLECTION_NAME 
+            for col in collections.collections
+        )
+        
+        if collection_exists:
+            # Check if dimensions match
+            try:
+                collection_info = qdrant.get_collection(config.COLLECTION_NAME)
+                existing_size = collection_info.config.params.vectors.size
+                
+                if existing_size != config.VECTOR_SIZE:
+                    logger.warning(f"Collection exists with wrong vector size: {existing_size}, expected: {config.VECTOR_SIZE}")
+                    logger.info("Recreating collection with correct dimensions...")
+                    
+                    # Delete existing collection
+                    qdrant.delete_collection(config.COLLECTION_NAME)
+                    collection_exists = False
+                else:
+                    logger.info(f"Collection {config.COLLECTION_NAME} exists with correct dimensions")
+                    
+            except Exception as e:
+                logger.error(f"Error checking collection dimensions: {e}")
+                # Delete and recreate to be safe
+                qdrant.delete_collection(config.COLLECTION_NAME)
+                collection_exists = False
+        
+        if not collection_exists:
+            logger.info(f"Creating collection: {config.COLLECTION_NAME} with {config.VECTOR_SIZE} dimensions")
+            qdrant.create_collection(
+                collection_name=config.COLLECTION_NAME,
+                vectors_config=models.VectorParams(
+                    size=config.VECTOR_SIZE, 
+                    distance=models.Distance.COSINE
+                ),
+                hnsw_config=models.HnswConfig(
+                    m=16,
+                    ef_construct=100,
+                    full_scan_threshold=10000,
+                ),
+                quantization_config=models.ScalarQuantization(
+                    scalar=models.ScalarQuantizationConfig(
+                        type=models.ScalarType.INT8,
+                        quantile=0.99,
+                        always_ram=True,
+                    ),
+                ),
+            )
+            logger.info("Collection created successfully")
+            
+    except Exception as e:
+        logger.error(f"Failed to initialize collection: {str(e)}")
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Database initialization failed: {str(e)}"
+        )
+
+def chunk_text(text: str, chunk_words: int = None, overlap: int = None) -> List[str]:
+    """Split text into overlapping chunks."""
+    chunk_words = chunk_words or config.CHUNK_SIZE
+    overlap = overlap or config.CHUNK_OVERLAP
+    
+    if not text or not text.strip():
+        return []
+    
+    words = text.split()
+    if len(words) <= chunk_words:
+        return [text]
+    
+    chunks = []
+    for i in range(0, len(words), chunk_words - overlap):
+        chunk_words_slice = words[i:i + chunk_words]
+        if not chunk_words_slice:
+            break
+            
+        chunk = " ".join(chunk_words_slice)
+        
+        if len(chunk_words_slice) >= overlap or i + chunk_words >= len(words):
+            chunks.append(chunk)
+            
+        if i + chunk_words >= len(words):
+            break
+    
+    return chunks
+
+async def embed_text(text: str) -> List[float]:
+    """Generate embeddings using local model."""
+    if not text or not text.strip():
+        raise ValueError("Text cannot be empty")
+    
+    try:
+        # Run embedding in thread pool to avoid blocking
+        loop = asyncio.get_event_loop()
+        embedding = await loop.run_in_executor(
+            None, 
+            lambda: embedding_model.encode(text.strip(), convert_to_tensor=False)
+        )
+        
+        # Convert numpy array to list
+        embedding_list = embedding.tolist()
+        
+        if len(embedding_list) != config.VECTOR_SIZE:
+            raise ValueError(f"Unexpected embedding size: {len(embedding_list)}")
+            
+        return embedding_list
+        
+    except Exception as e:
+        logger.error(f"Local embedding failed: {str(e)}")
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Embedding generation failed: {str(e)}"
+        )
+
+async def upsert_document(doc: Dict[str, Any]) -> Dict[str, Any]:
+    """Index Kenya Law case into Qdrant."""
+    start_time = datetime.now()
+    
+    # Validate document
+    if not doc:
+        raise ValueError("Document is empty")
+    
+    content = doc.get("content_text", "").strip()
+    if not content:
+        raise ValueError("Document content is empty")
+    
+    case_number = doc.get("case_number") or doc.get("doc_id")
+    if not case_number:
+        raise ValueError("Document must have case_number or doc_id")
+    
+    try:
+        # Generate chunks
+        chunks = chunk_text(content)
+        if not chunks:
+            raise ValueError("No chunks generated from document")
+        
+        logger.info(f"Processing document {case_number}: {len(chunks)} chunks")
+        
+        # Generate embeddings for all chunks
+        points = []
+        for i, chunk in enumerate(chunks):
+            try:
+                embedding = await embed_text(chunk)
+                
+                # Generate UUID from deterministic hash
+                hash_input = f"{case_number}_{i}_{chunk[:50]}".encode()
+                hash_bytes = hashlib.md5(hash_input).digest()
+                chunk_uuid = str(uuid.UUID(bytes=hash_bytes))
+                
+                points.append(models.PointStruct(
+                    id=chunk_uuid,
+                    vector=embedding,
+                    payload={
+                        "doc_id": case_number,
+                        "chunk_index": i,
+                        "title": doc.get("title", "Unknown Title"),
+                        "date": doc.get("date"),
+                        "court": doc.get("court"),
+                        "citations": doc.get("citations", []),
+                        "snippet": chunk[:500],
+                        "source_html_url": doc.get("source_html_url"),
+                        "indexed_at": datetime.utcnow().isoformat(),
+                        "chunk_length": len(chunk),
+                    }
+                ))
+                
+            except Exception as e:
+                logger.error(f"Failed to process chunk {i}: {str(e)}")
+                continue
+        
+        if not points:
+            raise ValueError("No chunks were successfully processed")
+        
+        # Upsert to Qdrant
+        try:
+            operation_result = qdrant.upsert(
+                collection_name=config.COLLECTION_NAME, 
+                points=points,
+                wait=True
+            )
+            
+        except Exception as e:
+            logger.error(f"Qdrant upsert failed: {str(e)}")
+            raise HTTPException(
+                status_code=500,
+                detail=f"Failed to store document vectors: {str(e)}"
+            )
+        
+        processing_time = (datetime.now() - start_time).total_seconds()
+        
+        result = {
+            "doc_id": case_number,
+            "chunks_processed": len(points),
+            "processing_time": processing_time,
+            "indexed_at": datetime.utcnow().isoformat(),
+            "embedding_model": config.EMBEDDING_MODEL_NAME
+        }
+        
+        logger.info(f"Document {case_number} indexed successfully: {result}")
+        return result
+        
+    except Exception as e:
+        logger.error(f"Document indexing failed for {case_number}: {str(e)}")
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Document indexing failed: {str(e)}"
+        )
+
+@router.post("/document/index", response_model=Dict[str, Any])
+async def index_document(request: DocumentRequest):
+    """Index a document by ID."""
+    try:
+        # You need to implement get_document_html
+        doc = await get_document_html(request.doc_id)
+        result = await upsert_document(doc)
+        
+        return {
+            **result,
+            "status": "indexed",
+            "document": {
+                "title": doc.get("title"),
+                "case_number": doc.get("case_number"),
+                "court": doc.get("court"),
+                "date": doc.get("date")
+            }
+        }
+        
+    except Exception as e:
+        logger.error(f"Document indexing endpoint failed: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.post("/ask", response_model=RAGResponse)
+async def ask_kenya_law(request: QueryRequest):
+    """Production-grade RAG query endpoint."""
+    start_time = datetime.now()
+    
+    logger.info(f"Received query: {request.query[:100]}...")
+    
+    try:
+        # Generate query embedding using local model
+        query_embedding = await embed_text(request.query)
+        
+        # Perform vector search
+        try:
+            search_results = qdrant.search(
+                collection_name=config.COLLECTION_NAME,
+                query_vector=query_embedding,
+                limit=request.limit,
+                score_threshold=request.min_score,
+                with_payload=True
+            )
+        except Exception as e:
+            logger.error(f"Vector search failed: {str(e)}")
+            raise HTTPException(
+                status_code=500, 
+                detail=f"Vector search failed: {str(e)}"
+            )
+        
+        logger.info(f"Vector search returned {len(search_results)} results")
+        
+        # Debug logging for empty results
+        if len(search_results) == 0:
+            logger.warning(f"No results found for query: '{request.query}' with min_score: {request.min_score}")
+            
+            # Try with lower threshold
+            if request.min_score > 0.3:
+                logger.info("Retrying search with lower threshold (0.2)")
+                search_results = qdrant.search(
+                    collection_name=config.COLLECTION_NAME,
+                    query_vector=query_embedding,
+                    limit=request.limit,
+                    score_threshold=0.2,
+                    with_payload=True
+                )
+                if search_results:
+                    logger.info(f"Found {len(search_results)} results with lowered threshold")
+        
+        if not search_results:
+            return RAGResponse(
+                answer="I couldn't find any relevant Kenyan legal cases for your query. Please try rephrasing your question or using different legal terms.",
+                sources=[],
+                query=request.query,
+                processing_time=(datetime.now() - start_time).total_seconds()
+            )
+        
+        # Build context from search results
+        context_parts = []
+        sources = []
+        
+        for hit in search_results:
+            payload = hit.payload
+            
+            context_part = f"""Case: {payload.get('title', 'Unknown')}
+Court: {payload.get('court', 'Unknown')}
+Date: {payload.get('date', 'Unknown')}
+Citations: {', '.join(payload.get('citations', []))}
+
+Content: {payload.get('snippet', '')}
+"""
+            context_parts.append(context_part)
+            
+            sources.append(Source(
+                doc_id=payload.get('doc_id', ''),
+                title=payload.get('title', 'Unknown Title'),
+                court=payload.get('court'),
+                date=payload.get('date'),
+                citations=payload.get('citations', []),
+                snippet=payload.get('snippet', ''),
+                source_html_url=payload.get('source_html_url'),
+                score=float(hit.score)
+            ))
+        
+        context = "\n" + "="*80 + "\n".join(context_parts)
+        
+        # Generate response using OpenAI (only for chat completion)
+        system_prompt = """You are an expert Kenyan legal assistant. Provide accurate, well-reasoned legal analysis based strictly on the provided case context.
+
+Guidelines:
+1. Only reference information from the provided cases
+2. Cite specific cases when making legal points
+3. Be precise about legal principles and precedents
+4. If the context doesn't fully answer the question, say so
+5. Use clear, professional legal language
+6. Structure your response logically"""
+
+        user_prompt = f"""Question: {request.query}
+
+Legal Cases Context:
+{context}
+
+Please provide a comprehensive legal analysis based on the provided Kenyan cases."""
+
+        completion = await openai_client.chat.completions.create(
+            model=config.CHAT_MODEL,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt}
+            ],
+            temperature=0.3,
+            max_tokens=1000,
+        )
+        
+        answer = completion.choices[0].message.content
+        processing_time = (datetime.now() - start_time).total_seconds()
+        
+        logger.info(f"Query processed successfully in {processing_time:.2f}s")
+        
+        return RAGResponse(
+            answer=answer,
+            sources=sources,
+            query=request.query,
+            processing_time=processing_time
+        )
+        
+    except Exception as e:
+        processing_time = (datetime.now() - start_time).total_seconds()
+        logger.error(f"RAG query failed after {processing_time:.2f}s: {str(e)}")
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Query processing failed: {str(e)}"
+        )
+
+@router.get("/health")
+async def health_check():
+    """Health check endpoint."""
+    try:
+        # Test Qdrant connection
+        qdrant.get_collections()
+        
+        # Test collection exists
+        collection_info = qdrant.get_collection(config.COLLECTION_NAME)
+        
+        # Test embedding model
+        test_embedding = await embed_text("test")
+        
+        return {
+            "status": "healthy",
+            "timestamp": datetime.utcnow().isoformat(),
+            "embedding_model": config.EMBEDDING_MODEL_NAME,
+            "vector_size": len(test_embedding),
+            "collection": {
+                "name": config.COLLECTION_NAME,
+                "vectors_count": collection_info.vectors_count,
+                "points_count": collection_info.points_count
+            }
+        }
+    except Exception as e:
+        logger.error(f"Health check failed: {str(e)}")
+        return JSONResponse(
+            status_code=503,
+            content={
+                "status": "unhealthy",
+                "error": str(e),
+                "timestamp": datetime.utcnow().isoformat()
+            }
+        )
+
+@router.post("/admin/recreate-collection")
+async def recreate_collection():
+    """Recreate collection with current model dimensions."""
+    try:
+        logger.info("Recreating collection...")
+        
+        # Delete existing collection if exists
+        try:
+            qdrant.delete_collection(config.COLLECTION_NAME)
+            logger.info("Deleted existing collection")
+        except Exception as e:
+            logger.info(f"No existing collection to delete: {e}")
+        
+        # Create new collection with correct dimensions
+        qdrant.create_collection(
+            collection_name=config.COLLECTION_NAME,
+            vectors_config=models.VectorParams(
+                size=config.VECTOR_SIZE, 
+                distance=models.Distance.COSINE
+            ),
+            hnsw_config=models.HnswConfig(
+                m=16,
+                ef_construct=100,
+                full_scan_threshold=10000,
+            ),
+            quantization_config=models.ScalarQuantization(
+                scalar=models.ScalarQuantizationConfig(
+                    type=models.ScalarType.INT8,
+                    quantile=0.99,
+                    always_ram=True,
+                ),
+            ),
+        )
+        
+        return {
+            "status": "success",
+            "message": "Collection recreated successfully",
+            "collection_name": config.COLLECTION_NAME,
+            "vector_size": config.VECTOR_SIZE,
+            "embedding_model": config.EMBEDDING_MODEL_NAME
+        }
+        
+    except Exception as e:
+        logger.error(f"Failed to recreate collection: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/admin/collection-info")
+async def get_collection_info():
+    """Get detailed collection information."""
+    try:
+        collection_info = qdrant.get_collection(config.COLLECTION_NAME)
+        
+        return {
+            "collection_name": config.COLLECTION_NAME,
+            "vector_size": collection_info.config.params.vectors.size,
+            "expected_size": config.VECTOR_SIZE,
+            "dimension_match": collection_info.config.params.vectors.size == config.VECTOR_SIZE,
+            "distance_metric": collection_info.config.params.vectors.distance.value,
+            "points_count": collection_info.points_count,
+            "vectors_count": collection_info.vectors_count,
+            "current_embedding_model": config.EMBEDDING_MODEL_NAME,
+            "status": collection_info.status
+        }
+        
+    except Exception as e:
+        return {
+            "error": str(e),
+            "collection_exists": False,
+            "expected_size": config.VECTOR_SIZE,
+            "current_embedding_model": config.EMBEDDING_MODEL_NAME
+        }
+
+@router.get("/models")
+async def list_available_models():
+    """List available embedding models."""
+    return {
+        "current_model": {
+            "name": config.EMBEDDING_MODEL_NAME,
+            "selected": config.SELECTED_MODEL,
+            "vector_size": config.VECTOR_SIZE
+        },
+        "available_models": config.EMBEDDING_MODELS,
+        "recommendations": {
+            "fastest": "all-miniLM (384d)",
+            "balanced": "bge-base (768d)",
+            "highest_quality": "bge-large (1024d)",
+            "best_for_legal": "bge-base or e5-base"
+        }
+    }
+
+# Include your debug endpoints here as well...
+@router.get("/debug/collection")
+async def debug_collection():
+    """Debug endpoint to check collection contents."""
+    try:
+        collection_info = qdrant.get_collection(config.COLLECTION_NAME)
+        
+        # Get a few sample points to verify data structure
+        sample_points = qdrant.scroll(
+            collection_name=config.COLLECTION_NAME,
+            limit=3,
+            with_payload=True,
+            with_vectors=False
+        )
+        
+        return {
+            "collection_name": config.COLLECTION_NAME,
+            "total_vectors": collection_info.vectors_count,
+            "total_points": collection_info.points_count,
+            "vector_size": collection_info.config.params.vectors.size,
+            "expected_size": config.VECTOR_SIZE,
+            "dimension_match": collection_info.config.params.vectors.size == config.VECTOR_SIZE,
+            "sample_points": [
+                {
+                    "id": point.id,
+                    "payload_keys": list(point.payload.keys()) if point.payload else [],
+                    "title": point.payload.get('title', 'N/A') if point.payload else 'N/A'
+                }
+                for point in sample_points[0]
+            ] if sample_points[0] else []
+        }
+    except Exception as e:
+        logger.error(f"Debug collection failed: {str(e)}")
+        return {
+            "error": str(e),
+            "collection_exists": False,
+            "expected_size": config.VECTOR_SIZE
+        }

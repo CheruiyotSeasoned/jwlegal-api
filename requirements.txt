@@ -22,7 +22,13 @@ numpy==1.26.4
 scikit-learn==1.3.2
 beautifulsoup4==4.12.2
 lxml==4.9.3
+aiofiles
 html5lib==1.1
 tika==1.24.0  
 requests==2.32.4
 nltk==3.9.1
+pip install qdrant-client
+tenacity
+tiktoken
+sentence-transformers
+ torch==2.2.2+cpu torchvision==0.17.2+cpu torchaudio==2.2.2+cpu -f https://download.pytorch.org/whl/torch_stable.html
