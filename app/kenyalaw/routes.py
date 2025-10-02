@@ -1179,7 +1179,6 @@ async def get_document_html(doc_id: str):
                 h = headings[i].strip().lower()
                 body = headings[i+1].strip() if i+1 < len(headings) else ""
                 sections[h] = body
-
         return {
             "title": merged_meta.get("title") or merged_meta.get("citation") or soup.title.string if soup.title else None,
             "date": merged_meta.get("judgment_date") or merged_meta.get("judgment date") or merged_meta.get("date") or metadata.get("date"),
@@ -1594,7 +1593,6 @@ try:
 except KeyError:
     tokenizer = tiktoken.get_encoding("cl100k_base")
 
-router = APIRouter(prefix="/api/v1/rag", tags=["Legal RAG"])
 
 @asynccontextmanager
 async def lifespan(app):
@@ -1817,13 +1815,16 @@ async def upsert_document(doc: Dict[str, Any]) -> Dict[str, Any]:
             detail=f"Document indexing failed: {str(e)}"
         )
 
-@router.post("/document/index", response_model=Dict[str, Any])
+@router.post("/rag/document/index", response_model=Dict[str, Any])
 async def index_document(request: DocumentRequest):
     """Index a document by ID."""
     try:
         # You need to implement get_document_html
         doc = await get_document_html(request.doc_id)
         result = await upsert_document(doc)
+        logger.info(f"Document indexing endpoint completed for {request.doc_id}")
+        logger.info(f"Indexing result: {doc.get('title')} | {result}")
+        logger.info(f"Document indexed: {doc}")
         
         return {
             **result,
@@ -1840,7 +1841,7 @@ async def index_document(request: DocumentRequest):
         logger.error(f"Document indexing endpoint failed: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
-@router.post("/ask", response_model=RAGResponse)
+@router.post("/rag/ask", response_model=RAGResponse)
 async def ask_kenya_law(request: QueryRequest):
     """Production-grade RAG query endpoint."""
     start_time = datetime.now()
@@ -1971,7 +1972,7 @@ Please provide a comprehensive legal analysis based on the provided Kenyan cases
             detail=f"Query processing failed: {str(e)}"
         )
 
-@router.get("/health")
+@router.get("/rag/health")
 async def health_check():
     """Health check endpoint."""
     try:
@@ -2006,7 +2007,7 @@ async def health_check():
             }
         )
 
-@router.post("/admin/recreate-collection")
+@router.post("/admin/rag/recreate-collection")
 async def recreate_collection():
     """Recreate collection with current model dimensions."""
     try:
@@ -2052,7 +2053,7 @@ async def recreate_collection():
         logger.error(f"Failed to recreate collection: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
-@router.get("/admin/collection-info")
+@router.get("/admin/rag/collection-info")
 async def get_collection_info():
     """Get detailed collection information."""
     try:
@@ -2078,7 +2079,7 @@ async def get_collection_info():
             "current_embedding_model": config.EMBEDDING_MODEL_NAME
         }
 
-@router.get("/models")
+@router.get("/rag/models")
 async def list_available_models():
     """List available embedding models."""
     return {
@@ -2097,7 +2098,7 @@ async def list_available_models():
     }
 
 # Include your debug endpoints here as well...
-@router.get("/debug/collection")
+@router.get("/rag/debug/collection")
 async def debug_collection():
     """Debug endpoint to check collection contents."""
     try:

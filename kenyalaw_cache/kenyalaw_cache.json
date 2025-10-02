@@ -7174,7 +7174,7 @@
               "topic_path_names": [
                 "Criminal Procedure"
               ],
-              "_score": 121.75135,
+              "_score": 122.10986,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "High Court",
@@ -7227,7 +7227,7 @@
               "topic_path_names": [
                 "Criminal Law"
               ],
-              "_score": 121.55327,
+              "_score": 121.910835,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "High Court",
@@ -7280,7 +7280,7 @@
               "topic_path_names": [
                 "Criminal Law"
               ],
-              "_score": 121.48948,
+              "_score": 121.849464,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "High Court",
@@ -7333,7 +7333,7 @@
               "topic_path_names": [
                 "Criminal Law"
               ],
-              "_score": 120.9984,
+              "_score": 121.35864,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "High Court",
@@ -7384,7 +7384,7 @@
               "alternative_names": [],
               "labels": [],
               "topic_path_names": [],
-              "_score": 118.58553,
+              "_score": 118.94151,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "High Court",
@@ -7437,7 +7437,7 @@
               "topic_path_names": [
                 "Criminal Law"
               ],
-              "_score": 118.002266,
+              "_score": 118.35998,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "High Court",
@@ -7490,7 +7490,7 @@
               "topic_path_names": [
                 "Criminal Law"
               ],
-              "_score": 117.89133,
+              "_score": 118.24418,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "High Court",
@@ -7543,7 +7543,7 @@
               "topic_path_names": [
                 "Criminal Procedure"
               ],
-              "_score": 117.85407,
+              "_score": 118.21199,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "High Court",
@@ -7596,7 +7596,7 @@
               "topic_path_names": [
                 "Criminal Law"
               ],
-              "_score": 117.66047,
+              "_score": 118.01621,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "High Court",
@@ -7649,7 +7649,7 @@
               "topic_path_names": [
                 "Criminal Procedure"
               ],
-              "_score": 117.507416,
+              "_score": 117.86263,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "High Court",
@@ -7690,7 +7690,7 @@
         "current_page": 1,
         "facets": {
           "_filter_locality": {
-            "doc_count": 20738,
+            "doc_count": 20796,
             "locality": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
@@ -7703,55 +7703,55 @@
             }
           },
           "_filter_doc_type": {
-            "doc_count": 20738,
+            "doc_count": 20796,
             "doc_type": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
               "buckets": [
                 {
                   "key": "judgment",
-                  "doc_count": 20738
+                  "doc_count": 20796
                 }
               ]
             }
           },
           "_filter_outcome": {
-            "doc_count": 20738,
+            "doc_count": 20796,
             "outcome": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
               "buckets": [
                 {
                   "key": "Dismissed",
-                  "doc_count": 1738
+                  "doc_count": 1752
                 },
                 {
                   "key": "Allowed",
-                  "doc_count": 1639
+                  "doc_count": 1641
                 },
                 {
                   "key": "Convicted",
-                  "doc_count": 1451
+                  "doc_count": 1464
                 },
                 {
                   "key": "Case to answer",
-                  "doc_count": 525
+                  "doc_count": 531
                 },
                 {
                   "key": "Acquitted",
-                  "doc_count": 484
+                  "doc_count": 488
                 },
                 {
                   "key": "Allowed in part",
-                  "doc_count": 366
+                  "doc_count": 367
                 },
                 {
                   "key": "Sentenced",
-                  "doc_count": 347
+                  "doc_count": 358
                 },
                 {
                   "key": "Court issues further directions",
-                  "doc_count": 261
+                  "doc_count": 266
                 },
                 {
                   "key": "File Closed",
@@ -7759,7 +7759,7 @@
                 },
                 {
                   "key": "Struck out",
-                  "doc_count": 49
+                  "doc_count": 50
                 },
                 {
                   "key": "Dismissed (with further directions)",
@@ -7767,7 +7767,7 @@
                 },
                 {
                   "key": "Discharged",
-                  "doc_count": 26
+                  "doc_count": 27
                 },
                 {
                   "key": "No Final Orders",
@@ -7797,7 +7797,7 @@
             }
           },
           "_filter_year": {
-            "doc_count": 20738,
+            "doc_count": 20796,
             "year": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
@@ -7823,12 +7823,12 @@
                   "doc_count": 1568
                 },
                 {
-                  "key": "2020",
-                  "doc_count": 1496
+                  "key": "2025",
+                  "doc_count": 1515
                 },
                 {
-                  "key": "2025",
-                  "doc_count": 1457
+                  "key": "2020",
+                  "doc_count": 1496
                 },
                 {
                   "key": "2017",
@@ -8006,14 +8006,14 @@
             }
           },
           "_filter_jurisdiction": {
-            "doc_count": 20738,
+            "doc_count": 20796,
             "jurisdiction": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
               "buckets": [
                 {
                   "key": "Kenya",
-                  "doc_count": 20737
+                  "doc_count": 20795
                 },
                 {
                   "key": "African Regional Bodies",
@@ -8023,7 +8023,7 @@
             }
           },
           "_filter_labels": {
-            "doc_count": 20738,
+            "doc_count": 20796,
             "labels": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
@@ -8036,18 +8036,18 @@
             }
           },
           "_filter_court": {
-            "doc_count": 20738,
+            "doc_count": 20796,
             "court": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
               "buckets": [
                 {
                   "key": "High Court",
-                  "doc_count": 18627
+                  "doc_count": 18679
                 },
                 {
                   "key": "Court of Appeal",
-                  "doc_count": 1933
+                  "doc_count": 1937
                 },
                 {
                   "key": "Environment and Land Court",
@@ -8055,7 +8055,7 @@
                 },
                 {
                   "key": "Magistrate's Court",
-                  "doc_count": 35
+                  "doc_count": 37
                 },
                 {
                   "key": "Employment and Labour Relations Court",
@@ -8097,20 +8097,20 @@
             }
           },
           "_filter_language": {
-            "doc_count": 20738,
+            "doc_count": 20796,
             "language": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
               "buckets": [
                 {
                   "key": "English",
-                  "doc_count": 20738
+                  "doc_count": 20796
                 }
               ]
             }
           },
           "_filter_authors": {
-            "doc_count": 20738,
+            "doc_count": 20796,
             "authors": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
@@ -8118,14 +8118,14 @@
             }
           },
           "_filter_nature": {
-            "doc_count": 20899,
+            "doc_count": 20957,
             "nature": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
               "buckets": [
                 {
                   "key": "Judgment",
-                  "doc_count": 20738
+                  "doc_count": 20796
                 },
                 {
                   "key": "Gazette",
@@ -8179,10 +8179,10 @@
             }
           },
           "_filter_judges": {
-            "doc_count": 20738,
+            "doc_count": 20796,
             "judges": {
               "doc_count_error_upper_bound": 15,
-              "sum_other_doc_count": 2615,
+              "sum_other_doc_count": 2637,
               "buckets": [
                 {
                   "key": "RE Aburili",
@@ -8205,12 +8205,12 @@
                   "doc_count": 347
                 },
                 {
-                  "key": "AC Mrima",
-                  "doc_count": 334
+                  "key": "DK Kemei",
+                  "doc_count": 335
                 },
                 {
-                  "key": "DK Kemei",
-                  "doc_count": 331
+                  "key": "AC Mrima",
+                  "doc_count": 334
                 },
                 {
                   "key": "DB Nyakundi",
@@ -8226,7 +8226,7 @@
                 },
                 {
                   "key": "GV Odunga",
-                  "doc_count": 297
+                  "doc_count": 299
                 },
                 {
                   "key": "RB Ngetich",
@@ -8238,7 +8238,7 @@
                 },
                 {
                   "key": "RN Nyakundi",
-                  "doc_count": 275
+                  "doc_count": 279
                 },
                 {
                   "key": "CM Kariuki",
@@ -8261,12 +8261,12 @@
                   "doc_count": 244
                 },
                 {
-                  "key": "KW Kiarie",
+                  "key": "K Kimondo",
                   "doc_count": 241
                 },
                 {
-                  "key": "K Kimondo",
-                  "doc_count": 237
+                  "key": "KW Kiarie",
+                  "doc_count": 241
                 },
                 {
                   "key": "FN Muchemi",
@@ -8310,7 +8310,7 @@
                 },
                 {
                   "key": "AT Sitati",
-                  "doc_count": 188
+                  "doc_count": 189
                 },
                 {
                   "key": "HK Chemitei",
@@ -8318,7 +8318,7 @@
                 },
                 {
                   "key": "JK Sergon",
-                  "doc_count": 181
+                  "doc_count": 185
                 },
                 {
                   "key": "AM Cockar",
@@ -8333,12 +8333,12 @@
                   "doc_count": 171
                 },
                 {
-                  "key": "AK Murgor",
-                  "doc_count": 164
+                  "key": "JN Kamau",
+                  "doc_count": 167
                 },
                 {
-                  "key": "JN Kamau",
-                  "doc_count": 163
+                  "key": "AK Murgor",
+                  "doc_count": 164
                 },
                 {
                   "key": "S ole Kantai",
@@ -8346,11 +8346,11 @@
                 },
                 {
                   "key": "A Mabeya",
-                  "doc_count": 155
+                  "doc_count": 158
                 },
                 {
                   "key": "RL Korir",
-                  "doc_count": 155
+                  "doc_count": 157
                 },
                 {
                   "key": "CC Kipkorir",
@@ -8358,7 +8358,7 @@
                 },
                 {
                   "key": "JN Onyiego",
-                  "doc_count": 148
+                  "doc_count": 149
                 },
                 {
                   "key": "P Nyamweya",
@@ -8382,7 +8382,7 @@
                 },
                 {
                   "key": "RM Mwongo",
-                  "doc_count": 141
+                  "doc_count": 142
                 },
                 {
                   "key": "SN Riechi",
@@ -8405,19 +8405,19 @@
                   "doc_count": 132
                 },
                 {
+                  "key": "TM Matheka",
+                  "doc_count": 131
+                },
+                {
                   "key": "HI Ong'udi",
                   "doc_count": 129
                 },
                 {
-                  "key": "TM Matheka",
-                  "doc_count": 129
+                  "key": "WK Korir",
+                  "doc_count": 126
                 },
                 {
                   "key": "JW Lessit",
-                  "doc_count": 124
-                },
-                {
-                  "key": "WK Korir",
                   "doc_count": 124
                 },
                 {
@@ -8430,7 +8430,7 @@
                 },
                 {
                   "key": "AN Ongeri",
-                  "doc_count": 118
+                  "doc_count": 119
                 },
                 {
                   "key": "DW Mbuteti",
@@ -8442,7 +8442,7 @@
                 },
                 {
                   "key": "GL Nzioka",
-                  "doc_count": 109
+                  "doc_count": 111
                 },
                 {
                   "key": "CW Githua",
@@ -8493,15 +8493,15 @@
                   "doc_count": 91
                 },
                 {
+                  "key": "MW Muigai",
+                  "doc_count": 91
+                },
+                {
                   "key": "DK Musinga",
                   "doc_count": 90
                 },
                 {
                   "key": "J Karanja",
-                  "doc_count": 90
-                },
-                {
-                  "key": "MW Muigai",
                   "doc_count": 90
                 },
                 {
@@ -8517,11 +8517,11 @@
                   "doc_count": 87
                 },
                 {
-                  "key": "HM Nyaga",
-                  "doc_count": 85
+                  "key": "SC Chirchir",
+                  "doc_count": 86
                 },
                 {
-                  "key": "SC Chirchir",
+                  "key": "HM Nyaga",
                   "doc_count": 85
                 },
                 {
@@ -8573,33 +8573,33 @@
                   "doc_count": 70
                 },
                 {
+                  "key": "PM Gachoka",
+                  "doc_count": 68
+                },
+                {
                   "key": "JM Nang'ea",
-                  "doc_count": 66
+                  "doc_count": 67
                 },
                 {
                   "key": "LA Achode",
                   "doc_count": 66
-                },
-                {
-                  "key": "I Lenaola",
-                  "doc_count": 64
                 }
               ]
             }
           },
           "_filter_registry": {
-            "doc_count": 20738,
+            "doc_count": 20796,
             "registry": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 12,
               "buckets": [
                 {
                   "key": "High Court at Nairobi (Milimani Law Courts)",
-                  "doc_count": 2033
+                  "doc_count": 2038
                 },
                 {
                   "key": "High Court at Nakuru",
-                  "doc_count": 1293
+                  "doc_count": 1294
                 },
                 {
                   "key": "High Court at Meru",
@@ -8607,15 +8607,15 @@
                 },
                 {
                   "key": "High Court at Kakamega",
-                  "doc_count": 964
+                  "doc_count": 968
                 },
                 {
                   "key": "High Court at Mombasa",
-                  "doc_count": 830
+                  "doc_count": 833
                 },
                 {
                   "key": "High Court at Machakos",
-                  "doc_count": 814
+                  "doc_count": 815
                 },
                 {
                   "key": "High Court at Kisii",
@@ -8627,11 +8627,11 @@
                 },
                 {
                   "key": "High Court at Eldoret",
-                  "doc_count": 686
+                  "doc_count": 690
                 },
                 {
                   "key": "High Court at Kisumu",
-                  "doc_count": 652
+                  "doc_count": 656
                 },
                 {
                   "key": "High Court at Nyeri",
@@ -8639,7 +8639,7 @@
                 },
                 {
                   "key": "High Court at Siaya",
-                  "doc_count": 539
+                  "doc_count": 543
                 },
                 {
                   "key": "Court of Appeal at Nairobi",
@@ -8647,11 +8647,11 @@
                 },
                 {
                   "key": "High Court at Embu",
-                  "doc_count": 503
+                  "doc_count": 504
                 },
                 {
                   "key": "High Court at Kericho",
-                  "doc_count": 497
+                  "doc_count": 501
                 },
                 {
                   "key": "High Court at Bungoma",
@@ -8667,19 +8667,19 @@
                 },
                 {
                   "key": "High Court at Malindi",
-                  "doc_count": 377
+                  "doc_count": 378
+                },
+                {
+                  "key": "High Court at Makueni",
+                  "doc_count": 329
                 },
                 {
                   "key": "High Court at Migori",
                   "doc_count": 328
                 },
                 {
-                  "key": "High Court at Makueni",
-                  "doc_count": 327
-                },
-                {
                   "key": "High Court at Kitale",
-                  "doc_count": 325
+                  "doc_count": 326
                 },
                 {
                   "key": "High Court at Garissa",
@@ -8695,7 +8695,7 @@
                 },
                 {
                   "key": "High Court at Bomet",
-                  "doc_count": 274
+                  "doc_count": 275
                 },
                 {
                   "key": "Court of Appeal at Nyeri",
@@ -8703,7 +8703,7 @@
                 },
                 {
                   "key": "Court of Appeal at Nakuru",
-                  "doc_count": 254
+                  "doc_count": 256
                 },
                 {
                   "key": "High Court at Kerugoya",
@@ -8714,12 +8714,12 @@
                   "doc_count": 247
                 },
                 {
-                  "key": "High Court at Kabarnet",
-                  "doc_count": 233
+                  "key": "High Court at Naivasha",
+                  "doc_count": 234
                 },
                 {
-                  "key": "High Court at Naivasha",
-                  "doc_count": 232
+                  "key": "High Court at Kabarnet",
+                  "doc_count": 233
                 },
                 {
                   "key": "High Court at Kajiado",
@@ -8731,11 +8731,11 @@
                 },
                 {
                   "key": "High Court at Nanyuki",
-                  "doc_count": 195
+                  "doc_count": 196
                 },
                 {
                   "key": "High Court at Chuka",
-                  "doc_count": 183
+                  "doc_count": 185
                 },
                 {
                   "key": "High Court at Nyamira",
@@ -8747,35 +8747,35 @@
                 },
                 {
                   "key": "High Court at Vihiga",
-                  "doc_count": 151
+                  "doc_count": 155
                 },
                 {
                   "key": "High Court at Nyahururu",
                   "doc_count": 142
                 },
                 {
-                  "key": "Court of Appeal at Mombasa",
+                  "key": "Court of Appeal at Eldoret",
                   "doc_count": 139
                 },
                 {
-                  "key": "Court of Appeal at Eldoret",
-                  "doc_count": 137
+                  "key": "Court of Appeal at Mombasa",
+                  "doc_count": 139
                 },
                 {
                   "key": "High Court at Narok",
                   "doc_count": 123
                 },
                 {
+                  "key": "High Court at Voi",
+                  "doc_count": 113
+                },
+                {
                   "key": "High Court at Lodwar",
                   "doc_count": 112
                 },
                 {
-                  "key": "High Court at Voi",
-                  "doc_count": 112
-                },
-                {
                   "key": "High Court at Garsen",
-                  "doc_count": 80
+                  "doc_count": 81
                 },
                 {
                   "key": "High Court at Kapenguria",
@@ -8791,7 +8791,7 @@
                 },
                 {
                   "key": "High Court at Marsabit",
-                  "doc_count": 65
+                  "doc_count": 67
                 },
                 {
                   "key": "High Court at Nyandarua",
@@ -8803,7 +8803,7 @@
                 },
                 {
                   "key": "High Court at Thika",
-                  "doc_count": 27
+                  "doc_count": 28
                 },
                 {
                   "key": "High Court at Kapsabet",
@@ -8827,11 +8827,15 @@
                 },
                 {
                   "key": "High Court at Mandera",
-                  "doc_count": 12
+                  "doc_count": 13
                 },
                 {
                   "key": "Environment and Land Court at Malindi",
                   "doc_count": 9
+                },
+                {
+                  "key": "Anti-Corruption Magistrate's Court",
+                  "doc_count": 7
                 },
                 {
                   "key": "Environment and Land Court at Kitale",
@@ -8842,15 +8846,15 @@
                   "doc_count": 7
                 },
                 {
-                  "key": "Anti-Corruption Magistrate's Court",
-                  "doc_count": 6
-                },
-                {
                   "key": "Employment and Labour Relations Court at Mombasa",
                   "doc_count": 6
                 },
                 {
                   "key": "Environment and Land Court at Eldoret",
+                  "doc_count": 6
+                },
+                {
+                  "key": "High Court at Isiolo",
                   "doc_count": 6
                 },
                 {
@@ -8860,10 +8864,6 @@
                 {
                   "key": "Makindu Law Courts",
                   "doc_count": 6
-                },
-                {
-                  "key": "High Court at Isiolo",
-                  "doc_count": 5
                 },
                 {
                   "key": "East African Court of Justice",
@@ -8882,6 +8882,10 @@
                   "doc_count": 4
                 },
                 {
+                  "key": "Maralal Law Courts",
+                  "doc_count": 4
+                },
+                {
                   "key": "Employment and Labour Relations Court at Nakuru",
                   "doc_count": 3
                 },
@@ -8895,10 +8899,6 @@
                 },
                 {
                   "key": "Environment and Land Court at Mombasa",
-                  "doc_count": 3
-                },
-                {
-                  "key": "Maralal Law Courts",
                   "doc_count": 3
                 },
                 {
@@ -8997,10 +8997,10 @@
             }
           },
           "_filter_attorneys": {
-            "doc_count": 20738,
+            "doc_count": 20796,
             "attorneys": {
               "doc_count_error_upper_bound": 8,
-              "sum_other_doc_count": 10996,
+              "sum_other_doc_count": 11033,
               "buckets": [
                 {
                   "key": "Mr. Ngiri",
@@ -9008,7 +9008,7 @@
                 },
                 {
                   "key": "Ms. Chala",
-                  "doc_count": 104
+                  "doc_count": 108
                 },
                 {
                   "key": "Mr. Akula",
@@ -9099,12 +9099,12 @@
                   "doc_count": 24
                 },
                 {
-                  "key": "Ms Kagali",
+                  "key": "Mr. Momanyi",
                   "doc_count": 24
                 },
                 {
-                  "key": "Mr. Momanyi",
-                  "doc_count": 23
+                  "key": "Ms Kagali",
+                  "doc_count": 24
                 },
                 {
                   "key": "Ms. Kagai, instructed by the Director of Public Prosecutions",
@@ -9187,6 +9187,10 @@
                   "doc_count": 17
                 },
                 {
+                  "key": "Mr. Kazungu",
+                  "doc_count": 17
+                },
+                {
                   "key": "Ms. Maina",
                   "doc_count": 17
                 },
@@ -9207,6 +9211,10 @@
                   "doc_count": 16
                 },
                 {
+                  "key": "Ms. Kigira",
+                  "doc_count": 16
+                },
+                {
                   "key": "Ms. Murunga",
                   "doc_count": 16
                 },
@@ -9224,14 +9232,6 @@
                 },
                 {
                   "key": "Mr. Igweta",
-                  "doc_count": 15
-                },
-                {
-                  "key": "Mr. Kazungu",
-                  "doc_count": 15
-                },
-                {
-                  "key": "Ms. Kigira",
                   "doc_count": 15
                 },
                 {
@@ -9319,6 +9319,10 @@
                   "doc_count": 13
                 },
                 {
+                  "key": "M/s Kerubo",
+                  "doc_count": 12
+                },
+                {
                   "key": "Mr. Kimani",
                   "doc_count": 12
                 },
@@ -9339,6 +9343,10 @@
                   "doc_count": 12
                 },
                 {
+                  "key": "Mr. Owuor",
+                  "doc_count": 12
+                },
+                {
                   "key": "Ms Kagai",
                   "doc_count": 12
                 },
@@ -9347,15 +9355,23 @@
                   "doc_count": 12
                 },
                 {
+                  "key": "Ms. Nyika",
+                  "doc_count": 12
+                },
+                {
                   "key": "……………………………....:",
                   "doc_count": 12
                 },
                 {
-                  "key": "M/s Kerubo",
+                  "key": "Mr Mugun",
                   "doc_count": 11
                 },
                 {
                   "key": "Mr. Abwajo",
+                  "doc_count": 11
+                },
+                {
+                  "key": "Mr. Hassan",
                   "doc_count": 11
                 },
                 {
@@ -9385,28 +9401,12 @@
                 {
                   "key": "Mr. Ochengo",
                   "doc_count": 11
-                },
-                {
-                  "key": "Mr. Okeyo",
-                  "doc_count": 11
-                },
-                {
-                  "key": "Ms Nduati",
-                  "doc_count": 11
-                },
-                {
-                  "key": "Ms Njoroge",
-                  "doc_count": 11
-                },
-                {
-                  "key": "Ms. Kagai, instructed by the Director of Public Prosecutions,",
-                  "doc_count": 11
                 }
               ]
             }
           },
           "_filter_matter_type": {
-            "doc_count": 20738,
+            "doc_count": 20796,
             "matter_type": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
@@ -9414,7 +9414,7 @@
             }
           }
         },
-        "cached_at": "2025-09-16T19:21:15.249166",
+        "cached_at": "2025-09-30T05:54:45.341432",
         "search_params": {
           "search_term": "Murder",
           "page": 1,
@@ -9425,7 +9425,7 @@
         "from_cache": false,
         "ai_enhanced": true
       },
-      "cached_at": "2025-09-16T19:21:15.482695",
+      "cached_at": "2025-09-30T05:54:46.012593",
       "search_params": {
         "search_term": "Murder",
         "page": 1,
@@ -9464,7 +9464,7 @@
               "topic_path_names": [
                 "Constitutional Law"
               ],
-              "_score": 307.13358,
+              "_score": 307.6345,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "High Court",
@@ -9520,7 +9520,7 @@
               "alternative_names": [],
               "labels": [],
               "topic_path_names": [],
-              "_score": 55.44577,
+              "_score": 55.32689,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "High Court",
@@ -9578,7 +9578,7 @@
               "topic_path_names": [
                 "Criminal Procedure"
               ],
-              "_score": 54.934296,
+              "_score": 54.8068,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "Supreme Court",
@@ -9626,7 +9626,7 @@
               ],
               "labels": [],
               "topic_path_names": [],
-              "_score": 54.225338,
+              "_score": 54.10395,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "Court of Appeal",
@@ -9674,7 +9674,7 @@
               "alternative_names": [],
               "labels": [],
               "topic_path_names": [],
-              "_score": 52.289158,
+              "_score": 52.177166,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "Court of Appeal",
@@ -9724,7 +9724,7 @@
               ],
               "labels": [],
               "topic_path_names": [],
-              "_score": 51.030823,
+              "_score": 50.91607,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "Court of Appeal",
@@ -9772,7 +9772,7 @@
               ],
               "labels": [],
               "topic_path_names": [],
-              "_score": 49.820984,
+              "_score": 49.693043,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "Court of Appeal",
@@ -9822,7 +9822,7 @@
               "topic_path_names": [
                 "Constitutional Law"
               ],
-              "_score": 48.721497,
+              "_score": 48.59285,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "High Court",
@@ -9881,7 +9881,7 @@
               "topic_path_names": [
                 "Constitutional Law"
               ],
-              "_score": 48.02677,
+              "_score": 47.921997,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "Supreme Court",
@@ -9932,7 +9932,7 @@
               ],
               "labels": [],
               "topic_path_names": [],
-              "_score": 47.781002,
+              "_score": 47.667404,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "High Court",
@@ -9968,7 +9968,7 @@
         "current_page": 1,
         "facets": {
           "_filter_locality": {
-            "doc_count": 10136,
+            "doc_count": 10160,
             "locality": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
@@ -9976,51 +9976,51 @@
             }
           },
           "_filter_doc_type": {
-            "doc_count": 10136,
+            "doc_count": 10160,
             "doc_type": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
               "buckets": [
                 {
                   "key": "judgment",
-                  "doc_count": 10136
+                  "doc_count": 10160
                 }
               ]
             }
           },
           "_filter_outcome": {
-            "doc_count": 10136,
+            "doc_count": 10160,
             "outcome": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
               "buckets": [
                 {
                   "key": "Dismissed",
-                  "doc_count": 1076
+                  "doc_count": 1088
                 },
                 {
                   "key": "Allowed",
-                  "doc_count": 780
+                  "doc_count": 781
                 },
                 {
                   "key": "Allowed in part",
-                  "doc_count": 185
+                  "doc_count": 189
                 },
                 {
                   "key": "Convicted",
-                  "doc_count": 48
+                  "doc_count": 49
                 },
                 {
                   "key": "Court issues further directions",
-                  "doc_count": 29
+                  "doc_count": 30
                 },
                 {
                   "key": "Struck out",
-                  "doc_count": 29
+                  "doc_count": 30
                 },
                 {
                   "key": "Sentenced",
-                  "doc_count": 13
+                  "doc_count": 15
                 },
                 {
                   "key": "Acquitted",
@@ -10035,11 +10035,11 @@
                   "doc_count": 5
                 },
                 {
-                  "key": "Quashed",
-                  "doc_count": 3
+                  "key": "No Final Orders",
+                  "doc_count": 2
                 },
                 {
-                  "key": "No Final Orders",
+                  "key": "Quashed",
                   "doc_count": 2
                 },
                 {
@@ -10062,7 +10062,7 @@
             }
           },
           "_filter_year": {
-            "doc_count": 10136,
+            "doc_count": 10160,
             "year": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
@@ -10105,7 +10105,7 @@
                 },
                 {
                   "key": "2025",
-                  "doc_count": 440
+                  "doc_count": 464
                 },
                 {
                   "key": "2017",
@@ -10267,20 +10267,20 @@
             }
           },
           "_filter_jurisdiction": {
-            "doc_count": 10136,
+            "doc_count": 10160,
             "jurisdiction": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
               "buckets": [
                 {
                   "key": "Kenya",
-                  "doc_count": 10136
+                  "doc_count": 10160
                 }
               ]
             }
           },
           "_filter_labels": {
-            "doc_count": 10136,
+            "doc_count": 10160,
             "labels": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
@@ -10293,18 +10293,18 @@
             }
           },
           "_filter_court": {
-            "doc_count": 10136,
+            "doc_count": 10160,
             "court": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
               "buckets": [
                 {
                   "key": "High Court",
-                  "doc_count": 8158
+                  "doc_count": 8175
                 },
                 {
                   "key": "Court of Appeal",
-                  "doc_count": 1914
+                  "doc_count": 1919
                 },
                 {
                   "key": "Employment and Labour Relations Court",
@@ -10316,7 +10316,7 @@
                 },
                 {
                   "key": "Magistrate's Court",
-                  "doc_count": 13
+                  "doc_count": 15
                 },
                 {
                   "key": "Supreme Court",
@@ -10334,20 +10334,20 @@
             }
           },
           "_filter_language": {
-            "doc_count": 10136,
+            "doc_count": 10160,
             "language": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
               "buckets": [
                 {
                   "key": "English",
-                  "doc_count": 10136
+                  "doc_count": 10160
                 }
               ]
             }
           },
           "_filter_authors": {
-            "doc_count": 10136,
+            "doc_count": 10160,
             "authors": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
@@ -10355,14 +10355,14 @@
             }
           },
           "_filter_nature": {
-            "doc_count": 10213,
+            "doc_count": 10237,
             "nature": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
               "buckets": [
                 {
                   "key": "Judgment",
-                  "doc_count": 10136
+                  "doc_count": 10160
                 },
                 {
                   "key": "Bench Bulletin",
@@ -10412,10 +10412,10 @@
             }
           },
           "_filter_judges": {
-            "doc_count": 10136,
+            "doc_count": 10160,
             "judges": {
               "doc_count_error_upper_bound": 8,
-              "sum_other_doc_count": 1294,
+              "sum_other_doc_count": 1301,
               "buckets": [
                 {
                   "key": "MSA Makhandia",
@@ -10478,11 +10478,11 @@
                   "doc_count": 137
                 },
                 {
-                  "key": "AK Murgor",
-                  "doc_count": 127
+                  "key": "GV Odunga",
+                  "doc_count": 129
                 },
                 {
-                  "key": "GV Odunga",
+                  "key": "AK Murgor",
                   "doc_count": 127
                 },
                 {
@@ -10519,7 +10519,7 @@
                 },
                 {
                   "key": "FN Muchemi",
-                  "doc_count": 105
+                  "doc_count": 106
                 },
                 {
                   "key": "GK Oenga",
@@ -10542,8 +10542,12 @@
                   "doc_count": 97
                 },
                 {
+                  "key": "RN Nyakundi",
+                  "doc_count": 94
+                },
+                {
                   "key": "DK Kemei",
-                  "doc_count": 92
+                  "doc_count": 93
                 },
                 {
                   "key": "TW Cherere",
@@ -10551,11 +10555,7 @@
                 },
                 {
                   "key": "A Mabeya",
-                  "doc_count": 89
-                },
-                {
-                  "key": "RN Nyakundi",
-                  "doc_count": 89
+                  "doc_count": 90
                 },
                 {
                   "key": "HK Chemitei",
@@ -10595,7 +10595,7 @@
                 },
                 {
                   "key": "AT Sitati",
-                  "doc_count": 66
+                  "doc_count": 68
                 },
                 {
                   "key": "MJA Emukule",
@@ -10611,14 +10611,14 @@
                 },
                 {
                   "key": "WK Korir",
-                  "doc_count": 62
-                },
-                {
-                  "key": "",
-                  "doc_count": 60
+                  "doc_count": 64
                 },
                 {
                   "key": "JN Kamau",
+                  "doc_count": 61
+                },
+                {
+                  "key": "",
                   "doc_count": 60
                 },
                 {
@@ -10658,8 +10658,16 @@
                   "doc_count": 50
                 },
                 {
+                  "key": "JM Mativo",
+                  "doc_count": 50
+                },
+                {
                   "key": "FA Ochieng",
                   "doc_count": 49
+                },
+                {
+                  "key": "JM Ngugi",
+                  "doc_count": 48
                 },
                 {
                   "key": "PK Tunoi",
@@ -10674,19 +10682,11 @@
                   "doc_count": 47
                 },
                 {
-                  "key": "JM Ngugi",
-                  "doc_count": 47
-                },
-                {
                   "key": "RB Ngetich",
                   "doc_count": 47
                 },
                 {
                   "key": "F Tuiyott",
-                  "doc_count": 46
-                },
-                {
-                  "key": "JM Mativo",
                   "doc_count": 46
                 },
                 {
@@ -10770,6 +10770,10 @@
                   "doc_count": 35
                 },
                 {
+                  "key": "PM Gachoka",
+                  "doc_count": 35
+                },
+                {
                   "key": "NA Matheka",
                   "doc_count": 34
                 },
@@ -10779,7 +10783,7 @@
                 },
                 {
                   "key": "K Kimondo",
-                  "doc_count": 32
+                  "doc_count": 33
                 },
                 {
                   "key": "SG Kairu",
@@ -10791,10 +10795,6 @@
                 },
                 {
                   "key": "OA Sewe",
-                  "doc_count": 31
-                },
-                {
-                  "key": "PM Gachoka",
                   "doc_count": 31
                 },
                 {
@@ -10821,14 +10821,14 @@
             }
           },
           "_filter_registry": {
-            "doc_count": 10136,
+            "doc_count": 10160,
             "registry": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
               "buckets": [
                 {
                   "key": "High Court at Nairobi (Milimani Law Courts)",
-                  "doc_count": 1356
+                  "doc_count": 1359
                 },
                 {
                   "key": "High Court at Nakuru",
@@ -10840,7 +10840,7 @@
                 },
                 {
                   "key": "High Court at Mombasa",
-                  "doc_count": 574
+                  "doc_count": 575
                 },
                 {
                   "key": "High Court at Nyeri",
@@ -10848,7 +10848,7 @@
                 },
                 {
                   "key": "High Court at Kakamega",
-                  "doc_count": 483
+                  "doc_count": 484
                 },
                 {
                   "key": "High Court at Meru",
@@ -10856,7 +10856,7 @@
                 },
                 {
                   "key": "High Court at Machakos",
-                  "doc_count": 411
+                  "doc_count": 412
                 },
                 {
                   "key": "Court of Appeal at Kisumu",
@@ -10864,19 +10864,19 @@
                 },
                 {
                   "key": "High Court at Kisumu",
-                  "doc_count": 360
+                  "doc_count": 361
                 },
                 {
                   "key": "Court of Appeal at Nyeri",
-                  "doc_count": 347
+                  "doc_count": 348
                 },
                 {
                   "key": "High Court at Eldoret",
-                  "doc_count": 325
+                  "doc_count": 330
                 },
                 {
                   "key": "Court of Appeal at Nakuru",
-                  "doc_count": 227
+                  "doc_count": 229
                 },
                 {
                   "key": "High Court at Kisii",
@@ -10892,7 +10892,7 @@
                 },
                 {
                   "key": "High Court at Siaya",
-                  "doc_count": 179
+                  "doc_count": 180
                 },
                 {
                   "key": "High Court at Malindi",
@@ -10935,12 +10935,12 @@
                   "doc_count": 98
                 },
                 {
-                  "key": "High Court at Kerugoya",
+                  "key": "Court of Appeal at Eldoret",
                   "doc_count": 96
                 },
                 {
-                  "key": "Court of Appeal at Eldoret",
-                  "doc_count": 94
+                  "key": "High Court at Kerugoya",
+                  "doc_count": 96
                 },
                 {
                   "key": "High Court at Busia",
@@ -10956,7 +10956,7 @@
                 },
                 {
                   "key": "High Court at Nanyuki",
-                  "doc_count": 68
+                  "doc_count": 69
                 },
                 {
                   "key": "High Court at Narok",
@@ -10983,11 +10983,11 @@
                   "doc_count": 51
                 },
                 {
-                  "key": "High Court at Lodwar",
-                  "doc_count": 48
+                  "key": "High Court at Vihiga",
+                  "doc_count": 49
                 },
                 {
-                  "key": "High Court at Vihiga",
+                  "key": "High Court at Lodwar",
                   "doc_count": 48
                 },
                 {
@@ -11016,7 +11016,7 @@
                 },
                 {
                   "key": "High Court at Thika",
-                  "doc_count": 18
+                  "doc_count": 20
                 },
                 {
                   "key": "High Court at Garsen",
@@ -11068,6 +11068,10 @@
                 },
                 {
                   "key": "Makindu Law Courts",
+                  "doc_count": 3
+                },
+                {
+                  "key": "Maralal Law Courts",
                   "doc_count": 3
                 },
                 {
@@ -11163,10 +11167,6 @@
                   "doc_count": 1
                 },
                 {
-                  "key": "Maralal Law Courts",
-                  "doc_count": 1
-                },
-                {
                   "key": "Nakuru Law Courts",
                   "doc_count": 1
                 },
@@ -11178,10 +11178,10 @@
             }
           },
           "_filter_attorneys": {
-            "doc_count": 10136,
+            "doc_count": 10160,
             "attorneys": {
               "doc_count_error_upper_bound": 3,
-              "sum_other_doc_count": 2774,
+              "sum_other_doc_count": 2781,
               "buckets": [
                 {
                   "key": "Mr. Momanyi",
@@ -11232,15 +11232,15 @@
                   "doc_count": 14
                 },
                 {
+                  "key": "Ms. Chala",
+                  "doc_count": 14
+                },
+                {
                   "key": "Miss Atina",
                   "doc_count": 13
                 },
                 {
                   "key": "Mr. Akula",
-                  "doc_count": 13
-                },
-                {
-                  "key": "Ms. Chala",
                   "doc_count": 13
                 },
                 {
@@ -11587,7 +11587,7 @@
             }
           },
           "_filter_matter_type": {
-            "doc_count": 10136,
+            "doc_count": 10160,
             "matter_type": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
@@ -11595,7 +11595,7 @@
             }
           }
         },
-        "cached_at": "2025-09-14T11:44:52.277775",
+        "cached_at": "2025-09-26T16:25:51.243435",
         "search_params": {
           "search_term": "Robbery with Violence",
           "page": 1,
@@ -11606,7 +11606,7 @@
         "from_cache": false,
         "ai_enhanced": true
       },
-      "cached_at": "2025-09-14T11:44:52.297991",
+      "cached_at": "2025-09-26T16:25:51.280935",
       "search_params": {
         "search_term": "Robbery with Violence",
         "page": 1,
@@ -63191,7 +63191,7 @@
               "topic_path_names": [
                 "Family Law"
               ],
-              "_score": 103.79926,
+              "_score": 103.992645,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "Magistrate's Court",
@@ -63244,7 +63244,7 @@
               "topic_path_names": [
                 "Family Law"
               ],
-              "_score": 102.8053,
+              "_score": 102.998665,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "Magistrate's Court",
@@ -63297,7 +63297,7 @@
               "topic_path_names": [
                 "Family Law"
               ],
-              "_score": 101.507545,
+              "_score": 101.71248,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "Kadhis Courts",
@@ -63350,7 +63350,7 @@
               "topic_path_names": [
                 "Family Law"
               ],
-              "_score": 101.406105,
+              "_score": 101.61423,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "Magistrate's Court",
@@ -63403,7 +63403,7 @@
               "topic_path_names": [
                 "Family Law"
               ],
-              "_score": 101.296,
+              "_score": 101.503105,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "Magistrate's Court",
@@ -63456,7 +63456,7 @@
               "topic_path_names": [
                 "Family Law"
               ],
-              "_score": 100.07424,
+              "_score": 100.289925,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "Kadhis Courts",
@@ -63475,59 +63475,6 @@
                 "Dismissed"
               ],
               "registry": "Kadhis Court at Mombasa",
-              "explanation": null,
-              "raw": null,
-              "relevance": 0.0,
-              "summary": "No factual information available.",
-              "content_source": "search_api",
-              "facts_word_count": 0,
-              "relevance_source": "traditional"
-            },
-            {
-              "id": "595410",
-              "doc_type": "judgment",
-              "title": "DMN v EOI (Divorce Cause E1527 of 2022) [2023] KEMC 191 (KLR) (26 June 2023) (Judgment)",
-              "date": "2023-06-26",
-              "year": 2023,
-              "jurisdiction": "Kenya",
-              "locality": null,
-              "citation": "DMN v EOI [2023] KEMC 191 (KLR)",
-              "expression_frbr_uri": "/akn/ke/judgment/kemc/2023/191/eng@2023-06-26",
-              "work_frbr_uri": "/akn/ke/judgment/kemc/2023/191",
-              "authors": null,
-              "matter_type": null,
-              "created_at": "2024-09-13T16:51:35.350466+00:00",
-              "case_number": [
-                "Divorce Cause E1527 of 2022"
-              ],
-              "judges": [
-                "JP Aduke"
-              ],
-              "is_most_recent": true,
-              "alternative_names": [],
-              "labels": [],
-              "topic_path_names": [
-                "Family Law"
-              ],
-              "_score": 100.06298,
-              "_index": "kenyalaw_eng",
-              "nature": "Judgment",
-              "court": "Magistrate's Court",
-              "highlight": {
-                "title": [
-                  "DMN v EOI (<mark>Divorce</mark> Cause E1527 of 2022) [2023] KEMC 191 (KLR) (26 June 2023) (Judgment)"
-                ],
-                "content": [
-                  "DMN v EOI (<mark>Divorce</mark> Cause E1527 of 2022) [2023] KEMC 191 (KLR) (26 June ",
-                  "The Petitioner filed the petition dated 16 th  December 2022 seeking a <mark>divorce</mark> on"
-                ]
-              },
-              "pages": [],
-              "provisions": [],
-              "outcome": [
-                "Allowed"
-              ],
-              "registry": "Milimani Commercial Chief Magistrate's Courts",
               "explanation": null,
               "raw": null,
               "relevance": 0.0,
@@ -63562,7 +63509,7 @@
               "topic_path_names": [
                 "Family Law"
               ],
-              "_score": 100.05106,
+              "_score": 100.26652,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "Magistrate's Court",
@@ -63573,6 +63520,59 @@
                 "content": [
                   "IN v JN (<mark>Divorce</mark> Cause E1101 of 2022) [2023] KEMC 167 (KLR) (17 July 2023",
                   "In the Milimani Commercial Chief Magistrate's Courts \n      \n       <mark>Divorce</mark>"
+                ]
+              },
+              "pages": [],
+              "provisions": [],
+              "outcome": [
+                "Allowed"
+              ],
+              "registry": "Milimani Commercial Chief Magistrate's Courts",
+              "explanation": null,
+              "raw": null,
+              "relevance": 0.0,
+              "summary": "No factual information available.",
+              "content_source": "search_api",
+              "facts_word_count": 0,
+              "relevance_source": "traditional"
+            },
+            {
+              "id": "595410",
+              "doc_type": "judgment",
+              "title": "DMN v EOI (Divorce Cause E1527 of 2022) [2023] KEMC 191 (KLR) (26 June 2023) (Judgment)",
+              "date": "2023-06-26",
+              "year": 2023,
+              "jurisdiction": "Kenya",
+              "locality": null,
+              "citation": "DMN v EOI [2023] KEMC 191 (KLR)",
+              "expression_frbr_uri": "/akn/ke/judgment/kemc/2023/191/eng@2023-06-26",
+              "work_frbr_uri": "/akn/ke/judgment/kemc/2023/191",
+              "authors": null,
+              "matter_type": null,
+              "created_at": "2024-09-13T16:51:35.350466+00:00",
+              "case_number": [
+                "Divorce Cause E1527 of 2022"
+              ],
+              "judges": [
+                "JP Aduke"
+              ],
+              "is_most_recent": true,
+              "alternative_names": [],
+              "labels": [],
+              "topic_path_names": [
+                "Family Law"
+              ],
+              "_score": 100.25621,
+              "_index": "kenyalaw_eng",
+              "nature": "Judgment",
+              "court": "Magistrate's Court",
+              "highlight": {
+                "title": [
+                  "DMN v EOI (<mark>Divorce</mark> Cause E1527 of 2022) [2023] KEMC 191 (KLR) (26 June 2023) (Judgment)"
+                ],
+                "content": [
+                  "DMN v EOI (<mark>Divorce</mark> Cause E1527 of 2022) [2023] KEMC 191 (KLR) (26 June ",
+                  "The Petitioner filed the petition dated 16 th  December 2022 seeking a <mark>divorce</mark> on"
                 ]
               },
               "pages": [],
@@ -63615,7 +63615,7 @@
               "topic_path_names": [
                 "Family Law"
               ],
-              "_score": 99.96056,
+              "_score": 100.153885,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "Magistrate's Court",
@@ -63668,7 +63668,7 @@
               "topic_path_names": [
                 "Family Law"
               ],
-              "_score": 99.8784,
+              "_score": 100.07098,
               "_index": "kenyalaw_eng",
               "nature": "Judgment",
               "court": "Magistrate's Court",
@@ -63704,12 +63704,12 @@
             "gpt_failures": 0
           }
         ],
-        "total_count": 6950,
+        "total_count": 6967,
         "total_pages": 0,
         "current_page": 1,
         "facets": {
           "_filter_locality": {
-            "doc_count": 6950,
+            "doc_count": 6967,
             "locality": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
@@ -63717,43 +63717,43 @@
             }
           },
           "_filter_doc_type": {
-            "doc_count": 6950,
+            "doc_count": 6967,
             "doc_type": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
               "buckets": [
                 {
                   "key": "judgment",
-                  "doc_count": 6950
+                  "doc_count": 6967
                 }
               ]
             }
           },
           "_filter_outcome": {
-            "doc_count": 6950,
+            "doc_count": 6967,
             "outcome": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
               "buckets": [
                 {
                   "key": "Allowed",
-                  "doc_count": 977
+                  "doc_count": 980
                 },
                 {
                   "key": "Dismissed",
-                  "doc_count": 608
+                  "doc_count": 619
                 },
                 {
                   "key": "Allowed in part",
-                  "doc_count": 128
+                  "doc_count": 130
                 },
                 {
                   "key": "Court issues further directions",
-                  "doc_count": 118
+                  "doc_count": 120
                 },
                 {
                   "key": "Struck out",
-                  "doc_count": 28
+                  "doc_count": 29
                 },
                 {
                   "key": "Convicted",
@@ -63761,7 +63761,7 @@
                 },
                 {
                   "key": "Dismissed (with further directions)",
-                  "doc_count": 10
+                  "doc_count": 11
                 },
                 {
                   "key": "Acquitted",
@@ -63772,11 +63772,11 @@
                   "doc_count": 5
                 },
                 {
-                  "key": "No Final Orders",
-                  "doc_count": 4
+                  "key": "Sentenced",
+                  "doc_count": 5
                 },
                 {
-                  "key": "Sentenced",
+                  "key": "No Final Orders",
                   "doc_count": 4
                 },
                 {
@@ -63807,7 +63807,7 @@
             }
           },
           "_filter_year": {
-            "doc_count": 6950,
+            "doc_count": 6967,
             "year": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
@@ -63850,7 +63850,7 @@
                 },
                 {
                   "key": "2021",
-                  "doc_count": 373
+                  "doc_count": 374
                 },
                 {
                   "key": "2020",
@@ -63858,7 +63858,7 @@
                 },
                 {
                   "key": "2025",
-                  "doc_count": 268
+                  "doc_count": 284
                 },
                 {
                   "key": "2013",
@@ -64024,14 +64024,14 @@
             }
           },
           "_filter_jurisdiction": {
-            "doc_count": 6950,
+            "doc_count": 6967,
             "jurisdiction": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
               "buckets": [
                 {
                   "key": "Kenya",
-                  "doc_count": 6949
+                  "doc_count": 6966
                 },
                 {
                   "key": "United Kingdom of Great Britain",
@@ -64041,7 +64041,7 @@
             }
           },
           "_filter_labels": {
-            "doc_count": 6950,
+            "doc_count": 6967,
             "labels": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
@@ -64054,22 +64054,22 @@
             }
           },
           "_filter_court": {
-            "doc_count": 6950,
+            "doc_count": 6967,
             "court": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
               "buckets": [
                 {
                   "key": "High Court",
-                  "doc_count": 5569
+                  "doc_count": 5580
                 },
                 {
                   "key": "Environment and Land Court",
-                  "doc_count": 524
+                  "doc_count": 527
                 },
                 {
                   "key": "Court of Appeal",
-                  "doc_count": 311
+                  "doc_count": 312
                 },
                 {
                   "key": "Kadhis Courts",
@@ -64077,7 +64077,7 @@
                 },
                 {
                   "key": "Magistrate's Court",
-                  "doc_count": 200
+                  "doc_count": 201
                 },
                 {
                   "key": "Employment and Labour Relations Court",
@@ -64092,15 +64092,15 @@
                   "doc_count": 6
                 },
                 {
+                  "key": "Tax Appeal Tribunal",
+                  "doc_count": 4
+                },
+                {
                   "key": "HIV and AIDS Tribunal",
                   "doc_count": 3
                 },
                 {
                   "key": "Sports Disputes Tribunal",
-                  "doc_count": 3
-                },
-                {
-                  "key": "Tax Appeal Tribunal",
                   "doc_count": 3
                 },
                 {
@@ -64131,20 +64131,20 @@
             }
           },
           "_filter_language": {
-            "doc_count": 6950,
+            "doc_count": 6967,
             "language": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
               "buckets": [
                 {
                   "key": "English",
-                  "doc_count": 6950
+                  "doc_count": 6967
                 }
               ]
             }
           },
           "_filter_authors": {
-            "doc_count": 6950,
+            "doc_count": 6967,
             "authors": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
@@ -64152,14 +64152,14 @@
             }
           },
           "_filter_nature": {
-            "doc_count": 7926,
+            "doc_count": 7944,
             "nature": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
               "buckets": [
                 {
                   "key": "Judgment",
-                  "doc_count": 6950
+                  "doc_count": 6967
                 },
                 {
                   "key": "Gazette",
@@ -64187,7 +64187,7 @@
                 },
                 {
                   "key": "Orders and Certifications",
-                  "doc_count": 15
+                  "doc_count": 16
                 },
                 {
                   "key": "Daily Cause List",
@@ -64225,22 +64225,22 @@
             }
           },
           "_filter_judges": {
-            "doc_count": 6950,
+            "doc_count": 6967,
             "judges": {
               "doc_count_error_upper_bound": 8,
-              "sum_other_doc_count": 1199,
+              "sum_other_doc_count": 1214,
               "buckets": [
                 {
                   "key": "DN Musyoka",
                   "doc_count": 348
                 },
                 {
-                  "key": "LK Kimaru",
+                  "key": "AO Muchelule",
                   "doc_count": 243
                 },
                 {
-                  "key": "AO Muchelule",
-                  "doc_count": 242
+                  "key": "LK Kimaru",
+                  "doc_count": 243
                 },
                 {
                   "key": "JP Aduke",
@@ -64315,19 +64315,19 @@
                   "doc_count": 52
                 },
                 {
+                  "key": "DO Ohungo",
+                  "doc_count": 51
+                },
+                {
                   "key": "GMA Dulu",
                   "doc_count": 51
                 },
                 {
-                  "key": "DO Ohungo",
+                  "key": "HK Chemitei",
                   "doc_count": 50
                 },
                 {
                   "key": "AC Mrima",
-                  "doc_count": 48
-                },
-                {
-                  "key": "HK Chemitei",
                   "doc_count": 48
                 },
                 {
@@ -64359,15 +64359,15 @@
                   "doc_count": 44
                 },
                 {
+                  "key": "RN Nyakundi",
+                  "doc_count": 44
+                },
+                {
                   "key": "CM Njagi",
                   "doc_count": 43
                 },
                 {
                   "key": "P Nyamweya",
-                  "doc_count": 43
-                },
-                {
-                  "key": "RN Nyakundi",
                   "doc_count": 43
                 },
                 {
@@ -64459,6 +64459,10 @@
                   "doc_count": 28
                 },
                 {
+                  "key": "JRA Wananda",
+                  "doc_count": 28
+                },
+                {
                   "key": "SN Riechi",
                   "doc_count": 28
                 },
@@ -64468,10 +64472,6 @@
                 },
                 {
                   "key": "JK Sergon",
-                  "doc_count": 26
-                },
-                {
-                  "key": "JRA Wananda",
                   "doc_count": 26
                 },
                 {
@@ -64607,6 +64607,10 @@
                   "doc_count": 18
                 },
                 {
+                  "key": "SG Kairu",
+                  "doc_count": 18
+                },
+                {
                   "key": "",
                   "doc_count": 17
                 },
@@ -64625,23 +64629,19 @@
                 {
                   "key": "LN Mutende",
                   "doc_count": 17
-                },
-                {
-                  "key": "SG Kairu",
-                  "doc_count": 17
                 }
               ]
             }
           },
           "_filter_registry": {
-            "doc_count": 6950,
+            "doc_count": 6967,
             "registry": {
               "doc_count_error_upper_bound": 0,
-              "sum_other_doc_count": 56,
+              "sum_other_doc_count": 57,
               "buckets": [
                 {
                   "key": "High Court at Nairobi (Milimani Law Courts)",
-                  "doc_count": 1970
+                  "doc_count": 1973
                 },
                 {
                   "key": "High Court at Nairobi (Milimani Commercial Courts)",
@@ -64657,7 +64657,7 @@
                 },
                 {
                   "key": "High Court at Eldoret",
-                  "doc_count": 202
+                  "doc_count": 205
                 },
                 {
                   "key": "High Court at Machakos",
@@ -64665,7 +64665,7 @@
                 },
                 {
                   "key": "Court of Appeal at Nairobi",
-                  "doc_count": 187
+                  "doc_count": 188
                 },
                 {
                   "key": "High Court at Meru",
@@ -64685,7 +64685,7 @@
                 },
                 {
                   "key": "High Court at Nyeri",
-                  "doc_count": 99
+                  "doc_count": 101
                 },
                 {
                   "key": "High Court at Kakamega",
@@ -64812,7 +64812,15 @@
                   "doc_count": 24
                 },
                 {
+                  "key": "High Court at Naivasha",
+                  "doc_count": 24
+                },
+                {
                   "key": "High Court at Homa Bay",
+                  "doc_count": 23
+                },
+                {
+                  "key": "High Court at Makueni",
                   "doc_count": 23
                 },
                 {
@@ -64837,14 +64845,6 @@
                 },
                 {
                   "key": "High Court at Kitui",
-                  "doc_count": 22
-                },
-                {
-                  "key": "High Court at Makueni",
-                  "doc_count": 22
-                },
-                {
-                  "key": "High Court at Naivasha",
                   "doc_count": 22
                 },
                 {
@@ -64892,6 +64892,10 @@
                   "doc_count": 13
                 },
                 {
+                  "key": "Environment and Land Court at Kakamega",
+                  "doc_count": 12
+                },
+                {
                   "key": "Kadhis Court at Bungoma",
                   "doc_count": 12
                 },
@@ -64905,10 +64909,6 @@
                 },
                 {
                   "key": "Environment and Land Court at Chuka",
-                  "doc_count": 11
-                },
-                {
-                  "key": "Environment and Land Court at Kakamega",
                   "doc_count": 11
                 },
                 {
@@ -64937,6 +64937,10 @@
                 },
                 {
                   "key": "Environment and Land Court at Busia",
+                  "doc_count": 7
+                },
+                {
+                  "key": "Environment and Land Court at Embu",
                   "doc_count": 7
                 },
                 {
@@ -64974,10 +64978,6 @@
                 {
                   "key": "Kadhis Court at Kericho",
                   "doc_count": 6
-                },
-                {
-                  "key": "Environment and Land Court at Embu",
-                  "doc_count": 5
                 },
                 {
                   "key": "Environment and Land Court at Kisumu",
@@ -65024,6 +65024,10 @@
                   "doc_count": 4
                 },
                 {
+                  "key": "Anti-Corruption Magistrate's Court",
+                  "doc_count": 3
+                },
+                {
                   "key": "Employment and Labour Relations Court at Nakuru",
                   "doc_count": 3
                 },
@@ -65034,19 +65038,15 @@
                 {
                   "key": "Environment and Land Court at Nyandarua",
                   "doc_count": 3
-                },
-                {
-                  "key": "High Court at Kapenguria",
-                  "doc_count": 3
                 }
               ]
             }
           },
           "_filter_attorneys": {
-            "doc_count": 6950,
+            "doc_count": 6967,
             "attorneys": {
               "doc_count_error_upper_bound": 2,
-              "sum_other_doc_count": 3492,
+              "sum_other_doc_count": 3514,
               "buckets": [
                 {
                   "key": "No appearance",
@@ -65122,6 +65122,10 @@
                 },
                 {
                   "key": "Mr. Langat",
+                  "doc_count": 4
+                },
+                {
+                  "key": "Mr. Makori",
                   "doc_count": 4
                 },
                 {
@@ -65206,10 +65210,6 @@
                 },
                 {
                   "key": "Mr. Maina",
-                  "doc_count": 3
-                },
-                {
-                  "key": "Mr. Makori",
                   "doc_count": 3
                 },
                 {
@@ -65452,7 +65452,7 @@
             }
           },
           "_filter_matter_type": {
-            "doc_count": 6950,
+            "doc_count": 6967,
             "matter_type": {
               "doc_count_error_upper_bound": 0,
               "sum_other_doc_count": 0,
@@ -65460,7 +65460,7 @@
             }
           }
         },
-        "cached_at": "2025-09-14T12:53:36.671801",
+        "cached_at": "2025-09-26T16:30:53.102256",
         "search_params": {
           "search_term": "Divorce",
           "page": 1,
@@ -65471,7 +65471,7 @@
         "from_cache": false,
         "ai_enhanced": true
       },
-      "cached_at": "2025-09-14T12:53:36.713888",
+      "cached_at": "2025-09-26T16:30:53.765383",
       "search_params": {
         "search_term": "Divorce",
         "page": 1,
@@ -83507,6 +83507,2169 @@
         "ai_enhancement_level": true,
         "gpt_rerank_top_n": 10
       }
+    },
+    "2b2c6e3ac6665f6dec63198f9727256a": {
+      "data": {
+        "results": [
+          [
+            {
+              "id": "335659",
+              "doc_type": "judgment",
+              "title": "Republic v Mwangi; Initiative for Strategic Litigation in Africa (ISLA) & 3 others (Amicus Curiae) (Petition E018 of 2023) [2024] KESC 34 (KLR) (12 July 2024) (Judgment)",
+              "date": "2024-07-12",
+              "year": 2024,
+              "jurisdiction": "Kenya",
+              "locality": null,
+              "citation": "Republic v Mwangi; Initiative for Strategic Litigation in Africa (ISLA) & 3 others (Amicus Curiae) [2024] KESC 34 (KLR)",
+              "expression_frbr_uri": "/akn/ke/judgment/kesc/2024/34/eng@2024-07-12",
+              "work_frbr_uri": "/akn/ke/judgment/kesc/2024/34",
+              "authors": null,
+              "matter_type": null,
+              "created_at": "2024-07-12T16:50:37.562772+00:00",
+              "case_number": [
+                "Petition E018 of 2023"
+              ],
+              "judges": [
+                "I Lenaola",
+                "MK Ibrahim",
+                "MK Koome",
+                "N Ndungu",
+                "SC Wanjala"
+              ],
+              "is_most_recent": true,
+              "alternative_names": [],
+              "labels": [
+                "reported"
+              ],
+              "topic_path_names": [
+                "Constitutional Law"
+              ],
+              "_score": 47.426003,
+              "_index": "kenyalaw_eng",
+              "nature": "Judgment",
+              "court": "Supreme Court",
+              "highlight": {
+                "content": [
+                  "direct in respect of other capital offences such as treason under section 40 (3), <mark>robbery</mark>",
+                  "with <mark>violence</mark> under section 296 (2), and attempted <mark>robbery</mark> with <mark>violence</mark> under section"
+                ]
+              },
+              "pages": [],
+              "provisions": [],
+              "outcome": [
+                "Allowed"
+              ],
+              "registry": "Supreme Court of Kenya",
+              "explanation": null,
+              "raw": null,
+              "relevance": 0.0,
+              "summary": "No factual information available.",
+              "content_source": "search_api",
+              "facts_word_count": 0,
+              "relevance_source": "traditional"
+            },
+            {
+              "id": "440863",
+              "doc_type": "judgment",
+              "title": "Peter Ngure Mwangi    v    Republic [2014] KECA 405 (KLR)",
+              "date": "2014-07-31",
+              "year": 2014,
+              "jurisdiction": "Kenya",
+              "locality": null,
+              "citation": "Peter Ngure Mwangi    v    Republic [2014] KECA 405 (KLR)",
+              "expression_frbr_uri": "/akn/ke/judgment/keca/2014/405/eng@2014-07-31",
+              "work_frbr_uri": "/akn/ke/judgment/keca/2014/405",
+              "authors": null,
+              "matter_type": null,
+              "created_at": "2022-07-06T20:55:34.310561+00:00",
+              "case_number": [
+                "Criminal Appeal 44 of 2010"
+              ],
+              "judges": [],
+              "is_most_recent": true,
+              "alternative_names": [
+                "Peter Ngure Mwangi    v    Republic [2014] eKLR"
+              ],
+              "labels": [],
+              "topic_path_names": [],
+              "_score": 46.885517,
+              "_index": "kenyalaw_eng",
+              "nature": "Judgment",
+              "court": "Court of Appeal",
+              "highlight": {
+                "content": [
+                  "with <mark>violence</mark>.",
+                  "As such he was fully aware that he faced a charge of <mark>robbery</mark> with <mark>violence</mark>."
+                ]
+              },
+              "pages": [],
+              "provisions": [],
+              "outcome": [],
+              "registry": "Court of Appeal at Nairobi",
+              "explanation": null,
+              "raw": null,
+              "relevance": 0.0,
+              "summary": "No factual information available.",
+              "content_source": "search_api",
+              "facts_word_count": 0,
+              "relevance_source": "traditional"
+            },
+            {
+              "id": "397746",
+              "doc_type": "judgment",
+              "title": "William Oongo Arunda (Hitherto referred to as Patrick Oduor Ochieng) v Republic (Criminal Appeal 49 of 2020) [2022] KECA 23 (KLR) (21 January 2022) (Judgment)",
+              "date": "2022-01-21",
+              "year": 2022,
+              "jurisdiction": "Kenya",
+              "locality": null,
+              "citation": "William Oongo Arunda (Hitherto referred to as Patrick Oduor Ochieng) v Republic [2022] KECA 23 (KLR)",
+              "expression_frbr_uri": "/akn/ke/judgment/keca/2022/23/eng@2022-01-21",
+              "work_frbr_uri": "/akn/ke/judgment/keca/2022/23",
+              "authors": null,
+              "matter_type": null,
+              "created_at": "2022-02-07T07:57:09.436907+00:00",
+              "case_number": [
+                "Criminal Appeal 49 of 2020"
+              ],
+              "judges": [
+                "A Mbogholi-Msagha",
+                "P Nyamweya",
+                "SG Kairu"
+              ],
+              "is_most_recent": true,
+              "alternative_names": [],
+              "labels": [],
+              "topic_path_names": [
+                "Criminal Law"
+              ],
+              "_score": 45.020817,
+              "_index": "kenyalaw_eng",
+              "nature": "Judgment",
+              "court": "Court of Appeal",
+              "highlight": {
+                "content": [
+                  "with <mark>violence</mark>.",
+                  "The issues for the determination are: Whether the offence of <mark>robbery</mark> with <mark>violence</mark>"
+                ]
+              },
+              "pages": [],
+              "provisions": [],
+              "outcome": [
+                "Dismissed"
+              ],
+              "registry": "Court of Appeal at Malindi",
+              "explanation": null,
+              "raw": null,
+              "relevance": 0.0,
+              "summary": "No factual information available.",
+              "content_source": "search_api",
+              "facts_word_count": 0,
+              "relevance_source": "traditional"
+            },
+            {
+              "id": "514073",
+              "doc_type": "judgment",
+              "title": "Jeremiah Oloo Odira v Republic [2018] KEHC 2195 (KLR)",
+              "date": "2018-11-23",
+              "year": 2018,
+              "jurisdiction": "Kenya",
+              "locality": null,
+              "citation": "Jeremiah Oloo Odira v Republic [2018] KEHC 2195 (KLR)",
+              "expression_frbr_uri": "/akn/ke/judgment/kehc/2018/2195/eng@2018-11-23",
+              "work_frbr_uri": "/akn/ke/judgment/kehc/2018/2195",
+              "authors": null,
+              "matter_type": null,
+              "created_at": "2022-07-02T10:38:13.884556+00:00",
+              "case_number": [
+                "Criminal Case 7 of 2018"
+              ],
+              "judges": [
+                "AC Mrima"
+              ],
+              "is_most_recent": true,
+              "alternative_names": [
+                "Jeremiah Oloo Odira v Republic [2018] eKLR"
+              ],
+              "labels": [],
+              "topic_path_names": [],
+              "_score": 44.64598,
+              "_index": "kenyalaw_eng",
+              "nature": "Judgment",
+              "court": "High Court",
+              "highlight": {
+                "content": [
+                  "The Appellant was convicted of the charge of <mark>robbery</mark> with <mark>violence</mark>.",
+                  "On the other hand, the offence of  <mark>robbery</mark> with <mark>violence</mark>  is committed when <mark>robbery</mark>"
+                ]
+              },
+              "pages": [],
+              "provisions": [],
+              "outcome": [],
+              "registry": "High Court at Migori",
+              "explanation": null,
+              "raw": null,
+              "relevance": 0.0,
+              "summary": "No factual information available.",
+              "content_source": "search_api",
+              "facts_word_count": 0,
+              "relevance_source": "traditional"
+            },
+            {
+              "id": "421560",
+              "doc_type": "judgment",
+              "title": "David Njuguna Wairimu v Republic [2010] KECA 495 (KLR)",
+              "date": "2010-06-18",
+              "year": 2010,
+              "jurisdiction": "Kenya",
+              "locality": null,
+              "citation": "David Njuguna Wairimu v Republic [2010] KECA 495 (KLR)",
+              "expression_frbr_uri": "/akn/ke/judgment/keca/2010/495/eng@2010-06-18",
+              "work_frbr_uri": "/akn/ke/judgment/keca/2010/495",
+              "authors": null,
+              "matter_type": null,
+              "created_at": "2022-10-19T17:05:32.296252+00:00",
+              "case_number": [
+                "Criminal Appeal 28 of 2009"
+              ],
+              "judges": [],
+              "is_most_recent": true,
+              "alternative_names": [
+                "David Njuguna Wairimu v Republic [2010] eKLR"
+              ],
+              "labels": [
+                "reported"
+              ],
+              "topic_path_names": [],
+              "_score": 44.39999,
+              "_index": "kenyalaw_eng",
+              "nature": "Judgment",
+              "court": "Court of Appeal",
+              "highlight": {
+                "content": [
+                  "The particulars of the <mark>robbery</mark> with <mark>violence</mark> charge read as follows:- \n \n\t  ",
+                  "It formed part of the particulars of the <mark>robbery</mark> with <mark>violence</mark> charge. "
+                ]
+              },
+              "pages": [],
+              "provisions": [],
+              "outcome": [],
+              "registry": "Court of Appeal at Kisumu",
+              "explanation": null,
+              "raw": null,
+              "relevance": 0.0,
+              "summary": "No factual information available.",
+              "content_source": "search_api",
+              "facts_word_count": 0,
+              "relevance_source": "traditional"
+            },
+            {
+              "id": "593543",
+              "doc_type": "judgment",
+              "title": "Maitanyi v Republic [1986] KECA 39 (KLR)",
+              "date": "1986-09-19",
+              "year": 1986,
+              "jurisdiction": "Kenya",
+              "locality": null,
+              "citation": "Maitanyi v Republic [1986] KECA 39 (KLR)",
+              "expression_frbr_uri": "/akn/ke/judgment/keca/1986/39/eng@1986-09-19",
+              "work_frbr_uri": "/akn/ke/judgment/keca/1986/39",
+              "authors": null,
+              "matter_type": null,
+              "created_at": "2022-06-28T17:35:22.426399+00:00",
+              "case_number": [
+                "Criminal Appeal 6 of 1986"
+              ],
+              "judges": [],
+              "is_most_recent": true,
+              "alternative_names": [
+                "Maitanyi v Republic [1986] eKLR"
+              ],
+              "labels": [
+                "reported"
+              ],
+              "topic_path_names": [],
+              "_score": 44.15668,
+              "_index": "kenyalaw_eng",
+              "nature": "Judgment",
+              "court": "Court of Appeal",
+              "highlight": {
+                "content": [
+                  "Nairobi, Mbaya J) \n \n\t JUDGMENT \n \n\tThe appellant appeals against his conviction of <mark>robbery</mark>",
+                  "with <mark>violence</mark> contrary to section 296(2) of the Penal Code (cap 63) and sentence"
+                ]
+              },
+              "pages": [],
+              "provisions": [],
+              "outcome": [],
+              "registry": "Court of Appeal at Nairobi",
+              "explanation": null,
+              "raw": null,
+              "relevance": 0.0,
+              "summary": "No factual information available.",
+              "content_source": "search_api",
+              "facts_word_count": 0,
+              "relevance_source": "traditional"
+            },
+            {
+              "id": "506436",
+              "doc_type": "judgment",
+              "title": "James Kariuki Wagana v Republic [2018] KEHC 6157 (KLR)",
+              "date": "2018-06-21",
+              "year": 2018,
+              "jurisdiction": "Kenya",
+              "locality": null,
+              "citation": "James Kariuki Wagana v Republic [2018] KEHC 6157 (KLR)",
+              "expression_frbr_uri": "/akn/ke/judgment/kehc/2018/6157/eng@2018-06-21",
+              "work_frbr_uri": "/akn/ke/judgment/kehc/2018/6157",
+              "authors": null,
+              "matter_type": null,
+              "created_at": "2022-07-02T13:20:44.345820+00:00",
+              "case_number": [
+                "Criminal Appeal 48 of 2016"
+              ],
+              "judges": [
+                "EM Ngugi"
+              ],
+              "is_most_recent": true,
+              "alternative_names": [
+                "James Kariuki Wagana v Republic [2018] eKLR"
+              ],
+              "labels": [],
+              "topic_path_names": [],
+              "_score": 44.120834,
+              "_index": "kenyalaw_eng",
+              "nature": "Judgment",
+              "court": "High Court",
+              "highlight": {
+                "content": [
+                  "First, he insisted that the ingredients of <mark>robbery</mark> with <mark>violence</mark> were not proved.",
+                  "The Appellant was convicted of the offence of <mark>robbery</mark> with <mark>violence</mark>. "
+                ]
+              },
+              "pages": [],
+              "provisions": [],
+              "outcome": [],
+              "registry": "High Court at Nakuru",
+              "explanation": null,
+              "raw": null,
+              "relevance": 0.0,
+              "summary": "No factual information available.",
+              "content_source": "search_api",
+              "facts_word_count": 0,
+              "relevance_source": "traditional"
+            },
+            {
+              "id": "421738",
+              "doc_type": "judgment",
+              "title": "Kiilu & another v Republic (Criminal Appeal 113 of 2001) [2005] KECA 335 (KLR) (18 February 2005) (Judgment)",
+              "date": "2005-02-18",
+              "year": 2005,
+              "jurisdiction": "Kenya",
+              "locality": null,
+              "citation": "Kiilu & another v Republic [2005] KECA 335 (KLR)",
+              "expression_frbr_uri": "/akn/ke/judgment/keca/2005/335/eng@2005-02-18",
+              "work_frbr_uri": "/akn/ke/judgment/keca/2005/335",
+              "authors": null,
+              "matter_type": null,
+              "created_at": "2022-10-20T13:50:37.402353+00:00",
+              "case_number": [
+                "Criminal Appeal 113 of 2001"
+              ],
+              "judges": [
+                "JWO Otieno",
+                "PK Tunoi",
+                "PN Waki"
+              ],
+              "is_most_recent": true,
+              "alternative_names": [
+                "Peter Kifue Kiilu & another v Republic [2005] eKLR"
+              ],
+              "labels": [
+                "reported"
+              ],
+              "topic_path_names": [
+                "Criminal Procedure"
+              ],
+              "_score": 43.32663,
+              "_index": "kenyalaw_eng",
+              "nature": "Judgment",
+              "court": "Court of Appeal",
+              "highlight": {
+                "content": [
+                  "The two were jointly charged with the offence of <mark>Robbery</mark> with <mark>violence</mark> contrary to",
+                  "In convicting the appellants of the offence of <mark>robbery</mark> with <mark>violence</mark> contrary to"
+                ]
+              },
+              "pages": [],
+              "provisions": [],
+              "outcome": [
+                "Allowed"
+              ],
+              "registry": "Court of Appeal at Eldoret",
+              "explanation": null,
+              "raw": null,
+              "relevance": 0.0,
+              "summary": "No factual information available.",
+              "content_source": "search_api",
+              "facts_word_count": 0,
+              "relevance_source": "traditional"
+            },
+            {
+              "id": "557907",
+              "doc_type": "judgment",
+              "title": "Julius Kalewa Mutunga  v  Republic (Criminal Appeal 31 of 2005) [2006] KECA 79 (KLR) (27 October 2006) (Judgment)",
+              "date": "2006-10-27",
+              "year": 2006,
+              "jurisdiction": "Kenya",
+              "locality": null,
+              "citation": "Julius Kalewa Mutunga  v  Republic [2006] KECA 79 (KLR)",
+              "expression_frbr_uri": "/akn/ke/judgment/keca/2006/79/eng@2006-10-27",
+              "work_frbr_uri": "/akn/ke/judgment/keca/2006/79",
+              "authors": null,
+              "matter_type": null,
+              "created_at": "2022-06-30T18:30:35.484847+00:00",
+              "case_number": [
+                "Criminal Appeal 31 of 2005"
+              ],
+              "judges": [
+                "J Wakiaga"
+              ],
+              "is_most_recent": true,
+              "alternative_names": [],
+              "labels": [],
+              "topic_path_names": [],
+              "_score": 41.7104,
+              "_index": "kenyalaw_eng",
+              "nature": "Judgment",
+              "court": "Court of Appeal",
+              "highlight": {
+                "content": [
+                  "Subsequently he had Kalewa charged with the offence of <mark>robbery</mark> with <mark>violence</mark> as stated",
+                  "with <mark>violence</mark>. "
+                ]
+              },
+              "pages": [],
+              "provisions": [],
+              "outcome": [
+                "Dismissed"
+              ],
+              "registry": "Court of Appeal at Nyeri",
+              "explanation": null,
+              "raw": null,
+              "relevance": 0.0,
+              "summary": "No factual information available.",
+              "content_source": "search_api",
+              "facts_word_count": 0,
+              "relevance_source": "traditional"
+            },
+            {
+              "id": "348152",
+              "doc_type": "judgment",
+              "title": "Kihonge v Republic (Criminal Appeal 30 of 2020) [2023] KEHC 26127 (KLR) (28 November 2023) (Judgment)",
+              "date": "2023-11-28",
+              "year": 2023,
+              "jurisdiction": "Kenya",
+              "locality": null,
+              "citation": "Kihonge v Republic [2023] KEHC 26127 (KLR)",
+              "expression_frbr_uri": "/akn/ke/judgment/kehc/2023/26127/eng@2023-11-28",
+              "work_frbr_uri": "/akn/ke/judgment/kehc/2023/26127",
+              "authors": null,
+              "matter_type": null,
+              "created_at": "2023-12-04T15:56:17.661313+00:00",
+              "case_number": [
+                "Criminal Appeal 30 of 2020"
+              ],
+              "judges": [
+                "CW Githua"
+              ],
+              "is_most_recent": true,
+              "alternative_names": [],
+              "labels": [],
+              "topic_path_names": [],
+              "_score": 41.356083,
+              "_index": "kenyalaw_eng",
+              "nature": "Judgment",
+              "court": "High Court",
+              "highlight": {
+                "content": [
+                  "struck or used any other <mark>violence</mark> on any person. \n \n \n 16.",
+                  "with <mark>violence</mark>."
+                ]
+              },
+              "pages": [],
+              "provisions": [],
+              "outcome": [
+                "Dismissed"
+              ],
+              "registry": "High Court at Murang'a",
+              "explanation": null,
+              "raw": null,
+              "relevance": 0.0,
+              "summary": "No factual information available.",
+              "content_source": "search_api",
+              "facts_word_count": 0,
+              "relevance_source": "traditional"
+            }
+          ],
+          {
+            "traditional_enhanced": 10,
+            "gpt_enhanced": 0,
+            "hybrid_enhanced": 0,
+            "full_content_fetched": 0,
+            "gpt_failures": 0
+          }
+        ],
+        "total_count": 10000,
+        "total_pages": 0,
+        "current_page": 2,
+        "facets": {
+          "_filter_locality": {
+            "doc_count": 10160,
+            "locality": {
+              "doc_count_error_upper_bound": 0,
+              "sum_other_doc_count": 0,
+              "buckets": []
+            }
+          },
+          "_filter_doc_type": {
+            "doc_count": 10160,
+            "doc_type": {
+              "doc_count_error_upper_bound": 0,
+              "sum_other_doc_count": 0,
+              "buckets": [
+                {
+                  "key": "judgment",
+                  "doc_count": 10160
+                }
+              ]
+            }
+          },
+          "_filter_outcome": {
+            "doc_count": 10160,
+            "outcome": {
+              "doc_count_error_upper_bound": 0,
+              "sum_other_doc_count": 0,
+              "buckets": [
+                {
+                  "key": "Dismissed",
+                  "doc_count": 1088
+                },
+                {
+                  "key": "Allowed",
+                  "doc_count": 781
+                },
+                {
+                  "key": "Allowed in part",
+                  "doc_count": 189
+                },
+                {
+                  "key": "Convicted",
+                  "doc_count": 49
+                },
+                {
+                  "key": "Court issues further directions",
+                  "doc_count": 30
+                },
+                {
+                  "key": "Struck out",
+                  "doc_count": 30
+                },
+                {
+                  "key": "Sentenced",
+                  "doc_count": 15
+                },
+                {
+                  "key": "Acquitted",
+                  "doc_count": 9
+                },
+                {
+                  "key": "File Closed",
+                  "doc_count": 9
+                },
+                {
+                  "key": "Dismissed (with further directions)",
+                  "doc_count": 5
+                },
+                {
+                  "key": "No Final Orders",
+                  "doc_count": 2
+                },
+                {
+                  "key": "Quashed",
+                  "doc_count": 2
+                },
+                {
+                  "key": "Adjourned",
+                  "doc_count": 1
+                },
+                {
+                  "key": "Case to answer",
+                  "doc_count": 1
+                },
+                {
+                  "key": "Court recuses itself",
+                  "doc_count": 1
+                },
+                {
+                  "key": "Withdrawn",
+                  "doc_count": 1
+                }
+              ]
+            }
+          },
+          "_filter_year": {
+            "doc_count": 10160,
+            "year": {
+              "doc_count_error_upper_bound": 0,
+              "sum_other_doc_count": 0,
+              "buckets": [
+                {
+                  "key": "2019",
+                  "doc_count": 840
+                },
+                {
+                  "key": "2020",
+                  "doc_count": 685
+                },
+                {
+                  "key": "2013",
+                  "doc_count": 623
+                },
+                {
+                  "key": "2024",
+                  "doc_count": 581
+                },
+                {
+                  "key": "2014",
+                  "doc_count": 548
+                },
+                {
+                  "key": "2018",
+                  "doc_count": 536
+                },
+                {
+                  "key": "2021",
+                  "doc_count": 505
+                },
+                {
+                  "key": "2023",
+                  "doc_count": 487
+                },
+                {
+                  "key": "2016",
+                  "doc_count": 466
+                },
+                {
+                  "key": "2025",
+                  "doc_count": 464
+                },
+                {
+                  "key": "2017",
+                  "doc_count": 439
+                },
+                {
+                  "key": "2006",
+                  "doc_count": 389
+                },
+                {
+                  "key": "2015",
+                  "doc_count": 383
+                },
+                {
+                  "key": "2011",
+                  "doc_count": 355
+                },
+                {
+                  "key": "2008",
+                  "doc_count": 352
+                },
+                {
+                  "key": "2022",
+                  "doc_count": 352
+                },
+                {
+                  "key": "2012",
+                  "doc_count": 335
+                },
+                {
+                  "key": "2010",
+                  "doc_count": 329
+                },
+                {
+                  "key": "2009",
+                  "doc_count": 327
+                },
+                {
+                  "key": "2007",
+                  "doc_count": 295
+                },
+                {
+                  "key": "2005",
+                  "doc_count": 250
+                },
+                {
+                  "key": "2004",
+                  "doc_count": 156
+                },
+                {
+                  "key": "2001",
+                  "doc_count": 86
+                },
+                {
+                  "key": "2002",
+                  "doc_count": 77
+                },
+                {
+                  "key": "2003",
+                  "doc_count": 76
+                },
+                {
+                  "key": "1998",
+                  "doc_count": 51
+                },
+                {
+                  "key": "2000",
+                  "doc_count": 31
+                },
+                {
+                  "key": "1985",
+                  "doc_count": 18
+                },
+                {
+                  "key": "1999",
+                  "doc_count": 17
+                },
+                {
+                  "key": "1983",
+                  "doc_count": 14
+                },
+                {
+                  "key": "1997",
+                  "doc_count": 11
+                },
+                {
+                  "key": "1982",
+                  "doc_count": 9
+                },
+                {
+                  "key": "1992",
+                  "doc_count": 9
+                },
+                {
+                  "key": "1995",
+                  "doc_count": 9
+                },
+                {
+                  "key": "1979",
+                  "doc_count": 7
+                },
+                {
+                  "key": "1984",
+                  "doc_count": 7
+                },
+                {
+                  "key": "1987",
+                  "doc_count": 7
+                },
+                {
+                  "key": "1996",
+                  "doc_count": 7
+                },
+                {
+                  "key": "1986",
+                  "doc_count": 5
+                },
+                {
+                  "key": "1980",
+                  "doc_count": 4
+                },
+                {
+                  "key": "1993",
+                  "doc_count": 4
+                },
+                {
+                  "key": "1990",
+                  "doc_count": 3
+                },
+                {
+                  "key": "1994",
+                  "doc_count": 3
+                },
+                {
+                  "key": "1981",
+                  "doc_count": 2
+                },
+                {
+                  "key": "1991",
+                  "doc_count": 2
+                },
+                {
+                  "key": "1977",
+                  "doc_count": 1
+                },
+                {
+                  "key": "1978",
+                  "doc_count": 1
+                },
+                {
+                  "key": "1988",
+                  "doc_count": 1
+                },
+                {
+                  "key": "1989",
+                  "doc_count": 1
+                }
+              ]
+            }
+          },
+          "_filter_jurisdiction": {
+            "doc_count": 10160,
+            "jurisdiction": {
+              "doc_count_error_upper_bound": 0,
+              "sum_other_doc_count": 0,
+              "buckets": [
+                {
+                  "key": "Kenya",
+                  "doc_count": 10160
+                }
+              ]
+            }
+          },
+          "_filter_labels": {
+            "doc_count": 10160,
+            "labels": {
+              "doc_count_error_upper_bound": 0,
+              "sum_other_doc_count": 0,
+              "buckets": [
+                {
+                  "key": "reported",
+                  "doc_count": 168
+                }
+              ]
+            }
+          },
+          "_filter_court": {
+            "doc_count": 10160,
+            "court": {
+              "doc_count_error_upper_bound": 0,
+              "sum_other_doc_count": 0,
+              "buckets": [
+                {
+                  "key": "High Court",
+                  "doc_count": 8175
+                },
+                {
+                  "key": "Court of Appeal",
+                  "doc_count": 1919
+                },
+                {
+                  "key": "Employment and Labour Relations Court",
+                  "doc_count": 23
+                },
+                {
+                  "key": "Environment and Land Court",
+                  "doc_count": 17
+                },
+                {
+                  "key": "Magistrate's Court",
+                  "doc_count": 15
+                },
+                {
+                  "key": "Supreme Court",
+                  "doc_count": 9
+                },
+                {
+                  "key": "Judges and Magistrates Vetting Board",
+                  "doc_count": 1
+                },
+                {
+                  "key": "Political Parties Disputes Tribunal",
+                  "doc_count": 1
+                }
+              ]
+            }
+          },
+          "_filter_language": {
+            "doc_count": 10160,
+            "language": {
+              "doc_count_error_upper_bound": 0,
+              "sum_other_doc_count": 0,
+              "buckets": [
+                {
+                  "key": "English",
+                  "doc_count": 10160
+                }
+              ]
+            }
+          },
+          "_filter_authors": {
+            "doc_count": 10160,
+            "authors": {
+              "doc_count_error_upper_bound": 0,
+              "sum_other_doc_count": 0,
+              "buckets": []
+            }
+          },
+          "_filter_nature": {
+            "doc_count": 10237,
+            "nature": {
+              "doc_count_error_upper_bound": 0,
+              "sum_other_doc_count": 0,
+              "buckets": [
+                {
+                  "key": "Judgment",
+                  "doc_count": 10160
+                },
+                {
+                  "key": "Bench Bulletin",
+                  "doc_count": 19
+                },
+                {
+                  "key": "Gazette",
+                  "doc_count": 19
+                },
+                {
+                  "key": "Legal Notice",
+                  "doc_count": 11
+                },
+                {
+                  "key": "Act",
+                  "doc_count": 7
+                },
+                {
+                  "key": "Bill",
+                  "doc_count": 6
+                },
+                {
+                  "key": "Commission Report",
+                  "doc_count": 6
+                },
+                {
+                  "key": "Journal",
+                  "doc_count": 3
+                },
+                {
+                  "key": "Article",
+                  "doc_count": 2
+                },
+                {
+                  "key": "Case Digests",
+                  "doc_count": 2
+                },
+                {
+                  "key": "Charter",
+                  "doc_count": 1
+                },
+                {
+                  "key": "Committee Report",
+                  "doc_count": 1
+                }
+              ]
+            }
+          },
+          "_filter_judges": {
+            "doc_count": 10160,
+            "judges": {
+              "doc_count_error_upper_bound": 8,
+              "sum_other_doc_count": 1301,
+              "buckets": [
+                {
+                  "key": "MSA Makhandia",
+                  "doc_count": 391
+                },
+                {
+                  "key": "LK Kimaru",
+                  "doc_count": 339
+                },
+                {
+                  "key": "J Wakiaga",
+                  "doc_count": 263
+                },
+                {
+                  "key": "DO Ogembo",
+                  "doc_count": 201
+                },
+                {
+                  "key": "RE Aburili",
+                  "doc_count": 197
+                },
+                {
+                  "key": "AM Githinji",
+                  "doc_count": 193
+                },
+                {
+                  "key": "DR Kavedza",
+                  "doc_count": 169
+                },
+                {
+                  "key": "MM Kasango",
+                  "doc_count": 168
+                },
+                {
+                  "key": "S ole Kantai",
+                  "doc_count": 165
+                },
+                {
+                  "key": "CJ Kendagor",
+                  "doc_count": 159
+                },
+                {
+                  "key": "DAS Majanja",
+                  "doc_count": 153
+                },
+                {
+                  "key": "DK Musinga",
+                  "doc_count": 151
+                },
+                {
+                  "key": "MK Koome",
+                  "doc_count": 142
+                },
+                {
+                  "key": "CA Otieno",
+                  "doc_count": 139
+                },
+                {
+                  "key": "SP Ouko",
+                  "doc_count": 137
+                },
+                {
+                  "key": "GV Odunga",
+                  "doc_count": 129
+                },
+                {
+                  "key": "AK Murgor",
+                  "doc_count": 127
+                },
+                {
+                  "key": "F Sichale",
+                  "doc_count": 123
+                },
+                {
+                  "key": "GG Okwengu",
+                  "doc_count": 121
+                },
+                {
+                  "key": "GMA Dulu",
+                  "doc_count": 121
+                },
+                {
+                  "key": "JW Lessit",
+                  "doc_count": 115
+                },
+                {
+                  "key": "DN Musyoka",
+                  "doc_count": 113
+                },
+                {
+                  "key": "RN Nambuye",
+                  "doc_count": 111
+                },
+                {
+                  "key": "EM Ngugi",
+                  "doc_count": 107
+                },
+                {
+                  "key": "CM Kariuki",
+                  "doc_count": 106
+                },
+                {
+                  "key": "FN Muchemi",
+                  "doc_count": 106
+                },
+                {
+                  "key": "GK Oenga",
+                  "doc_count": 105
+                },
+                {
+                  "key": "DB Nyakundi",
+                  "doc_count": 103
+                },
+                {
+                  "key": "J Karanja",
+                  "doc_count": 101
+                },
+                {
+                  "key": "LN Mutende",
+                  "doc_count": 100
+                },
+                {
+                  "key": "DK Maraga",
+                  "doc_count": 97
+                },
+                {
+                  "key": "RN Nyakundi",
+                  "doc_count": 94
+                },
+                {
+                  "key": "DK Kemei",
+                  "doc_count": 93
+                },
+                {
+                  "key": "TW Cherere",
+                  "doc_count": 92
+                },
+                {
+                  "key": "A Mabeya",
+                  "doc_count": 90
+                },
+                {
+                  "key": "HK Chemitei",
+                  "doc_count": 83
+                },
+                {
+                  "key": "A Mohammed",
+                  "doc_count": 78
+                },
+                {
+                  "key": "KW Kiarie",
+                  "doc_count": 78
+                },
+                {
+                  "key": "P Nyamweya",
+                  "doc_count": 77
+                },
+                {
+                  "key": "ARM Visram",
+                  "doc_count": 73
+                },
+                {
+                  "key": "EM Muriithi",
+                  "doc_count": 72
+                },
+                {
+                  "key": "F Gikonyo",
+                  "doc_count": 71
+                },
+                {
+                  "key": "JB Ojwang",
+                  "doc_count": 71
+                },
+                {
+                  "key": "RPV Wendoh",
+                  "doc_count": 70
+                },
+                {
+                  "key": "AT Sitati",
+                  "doc_count": 68
+                },
+                {
+                  "key": "MJA Emukule",
+                  "doc_count": 66
+                },
+                {
+                  "key": "AC Mrima",
+                  "doc_count": 65
+                },
+                {
+                  "key": "JV Juma",
+                  "doc_count": 64
+                },
+                {
+                  "key": "WK Korir",
+                  "doc_count": 64
+                },
+                {
+                  "key": "JN Kamau",
+                  "doc_count": 61
+                },
+                {
+                  "key": "",
+                  "doc_count": 60
+                },
+                {
+                  "key": "DO Ohungo",
+                  "doc_count": 58
+                },
+                {
+                  "key": "PO Kiage",
+                  "doc_count": 58
+                },
+                {
+                  "key": "CW Meoli",
+                  "doc_count": 57
+                },
+                {
+                  "key": "CM Kamau",
+                  "doc_count": 56
+                },
+                {
+                  "key": "SJ Chitembwe",
+                  "doc_count": 53
+                },
+                {
+                  "key": "HM Okwengu",
+                  "doc_count": 52
+                },
+                {
+                  "key": "LW Gitari",
+                  "doc_count": 51
+                },
+                {
+                  "key": "MA Warsame",
+                  "doc_count": 51
+                },
+                {
+                  "key": "CM Njagi",
+                  "doc_count": 50
+                },
+                {
+                  "key": "JM Mativo",
+                  "doc_count": 50
+                },
+                {
+                  "key": "FA Ochieng",
+                  "doc_count": 49
+                },
+                {
+                  "key": "JM Ngugi",
+                  "doc_count": 48
+                },
+                {
+                  "key": "PK Tunoi",
+                  "doc_count": 48
+                },
+                {
+                  "key": "A Mshila",
+                  "doc_count": 47
+                },
+                {
+                  "key": "GL Nzioka",
+                  "doc_count": 47
+                },
+                {
+                  "key": "RB Ngetich",
+                  "doc_count": 47
+                },
+                {
+                  "key": "F Tuiyott",
+                  "doc_count": 46
+                },
+                {
+                  "key": "LA Achode",
+                  "doc_count": 46
+                },
+                {
+                  "key": "DW Mbuteti",
+                  "doc_count": 45
+                },
+                {
+                  "key": "HA Omondi",
+                  "doc_count": 44
+                },
+                {
+                  "key": "JK Sergon",
+                  "doc_count": 44
+                },
+                {
+                  "key": "EM Muchoki",
+                  "doc_count": 43
+                },
+                {
+                  "key": "WM Musyoka",
+                  "doc_count": 43
+                },
+                {
+                  "key": "W Karanja",
+                  "doc_count": 42
+                },
+                {
+                  "key": "A Ali-Aroni",
+                  "doc_count": 41
+                },
+                {
+                  "key": "A Mbogholi-Msagha",
+                  "doc_count": 40
+                },
+                {
+                  "key": "A. Ong’injo",
+                  "doc_count": 40
+                },
+                {
+                  "key": "AN Makau",
+                  "doc_count": 40
+                },
+                {
+                  "key": "M Ngugi",
+                  "doc_count": 40
+                },
+                {
+                  "key": "PM Mwilu",
+                  "doc_count": 40
+                },
+                {
+                  "key": "DA Onyancha",
+                  "doc_count": 39
+                },
+                {
+                  "key": "I Lenaola",
+                  "doc_count": 38
+                },
+                {
+                  "key": "REA Ougo",
+                  "doc_count": 38
+                },
+                {
+                  "key": "LM Njuguna",
+                  "doc_count": 37
+                },
+                {
+                  "key": "AW Macharia",
+                  "doc_count": 36
+                },
+                {
+                  "key": "JM Khamoni",
+                  "doc_count": 36
+                },
+                {
+                  "key": "BB Limo",
+                  "doc_count": 35
+                },
+                {
+                  "key": "PM Gachoka",
+                  "doc_count": 35
+                },
+                {
+                  "key": "NA Matheka",
+                  "doc_count": 34
+                },
+                {
+                  "key": "WA Okwany",
+                  "doc_count": 34
+                },
+                {
+                  "key": "K Kimondo",
+                  "doc_count": 33
+                },
+                {
+                  "key": "SG Kairu",
+                  "doc_count": 32
+                },
+                {
+                  "key": "AM Cockar",
+                  "doc_count": 31
+                },
+                {
+                  "key": "OA Sewe",
+                  "doc_count": 31
+                },
+                {
+                  "key": "RM Mwongo",
+                  "doc_count": 31
+                },
+                {
+                  "key": "EC Mwita",
+                  "doc_count": 30
+                },
+                {
+                  "key": "BT Jaden",
+                  "doc_count": 29
+                },
+                {
+                  "key": "CW Githua",
+                  "doc_count": 28
+                },
+                {
+                  "key": "J Ngaah",
+                  "doc_count": 28
+                }
+              ]
+            }
+          },
+          "_filter_registry": {
+            "doc_count": 10160,
+            "registry": {
+              "doc_count_error_upper_bound": 0,
+              "sum_other_doc_count": 0,
+              "buckets": [
+                {
+                  "key": "High Court at Nairobi (Milimani Law Courts)",
+                  "doc_count": 1359
+                },
+                {
+                  "key": "High Court at Nakuru",
+                  "doc_count": 663
+                },
+                {
+                  "key": "Court of Appeal at Nairobi",
+                  "doc_count": 596
+                },
+                {
+                  "key": "High Court at Mombasa",
+                  "doc_count": 575
+                },
+                {
+                  "key": "High Court at Nyeri",
+                  "doc_count": 504
+                },
+                {
+                  "key": "High Court at Kakamega",
+                  "doc_count": 484
+                },
+                {
+                  "key": "High Court at Meru",
+                  "doc_count": 419
+                },
+                {
+                  "key": "High Court at Machakos",
+                  "doc_count": 412
+                },
+                {
+                  "key": "Court of Appeal at Kisumu",
+                  "doc_count": 397
+                },
+                {
+                  "key": "High Court at Kisumu",
+                  "doc_count": 361
+                },
+                {
+                  "key": "Court of Appeal at Nyeri",
+                  "doc_count": 348
+                },
+                {
+                  "key": "High Court at Eldoret",
+                  "doc_count": 330
+                },
+                {
+                  "key": "Court of Appeal at Nakuru",
+                  "doc_count": 229
+                },
+                {
+                  "key": "High Court at Kisii",
+                  "doc_count": 223
+                },
+                {
+                  "key": "High Court at Nairobi (Milimani Commercial Courts)",
+                  "doc_count": 189
+                },
+                {
+                  "key": "High Court at Embu",
+                  "doc_count": 188
+                },
+                {
+                  "key": "High Court at Siaya",
+                  "doc_count": 180
+                },
+                {
+                  "key": "High Court at Malindi",
+                  "doc_count": 167
+                },
+                {
+                  "key": "High Court at Kibera",
+                  "doc_count": 163
+                },
+                {
+                  "key": "High Court at Bungoma",
+                  "doc_count": 159
+                },
+                {
+                  "key": "High Court at Kitale",
+                  "doc_count": 144
+                },
+                {
+                  "key": "High Court at Kiambu",
+                  "doc_count": 136
+                },
+                {
+                  "key": "Court of Appeal at Malindi",
+                  "doc_count": 130
+                },
+                {
+                  "key": "High Court at Naivasha",
+                  "doc_count": 122
+                },
+                {
+                  "key": "Court of Appeal at Mombasa",
+                  "doc_count": 121
+                },
+                {
+                  "key": "High Court at Garissa",
+                  "doc_count": 116
+                },
+                {
+                  "key": "High Court at Murang'a",
+                  "doc_count": 98
+                },
+                {
+                  "key": "Court of Appeal at Eldoret",
+                  "doc_count": 96
+                },
+                {
+                  "key": "High Court at Kerugoya",
+                  "doc_count": 96
+                },
+                {
+                  "key": "High Court at Busia",
+                  "doc_count": 93
+                },
+                {
+                  "key": "High Court at Kericho",
+                  "doc_count": 74
+                },
+                {
+                  "key": "High Court at Migori",
+                  "doc_count": 71
+                },
+                {
+                  "key": "High Court at Nanyuki",
+                  "doc_count": 69
+                },
+                {
+                  "key": "High Court at Narok",
+                  "doc_count": 68
+                },
+                {
+                  "key": "High Court at Kajiado",
+                  "doc_count": 66
+                },
+                {
+                  "key": "High Court at Kitui",
+                  "doc_count": 65
+                },
+                {
+                  "key": "High Court at Makueni",
+                  "doc_count": 63
+                },
+                {
+                  "key": "High Court at Nyamira",
+                  "doc_count": 62
+                },
+                {
+                  "key": "High Court at Voi",
+                  "doc_count": 51
+                },
+                {
+                  "key": "High Court at Vihiga",
+                  "doc_count": 49
+                },
+                {
+                  "key": "High Court at Lodwar",
+                  "doc_count": 48
+                },
+                {
+                  "key": "High Court at Homa Bay",
+                  "doc_count": 47
+                },
+                {
+                  "key": "High Court at Kabarnet",
+                  "doc_count": 43
+                },
+                {
+                  "key": "High Court at Chuka",
+                  "doc_count": 36
+                },
+                {
+                  "key": "High Court at Nyahururu",
+                  "doc_count": 34
+                },
+                {
+                  "key": "High Court at Marsabit",
+                  "doc_count": 26
+                },
+                {
+                  "key": "High Court at Bomet",
+                  "doc_count": 25
+                },
+                {
+                  "key": "High Court at Thika",
+                  "doc_count": 20
+                },
+                {
+                  "key": "High Court at Garsen",
+                  "doc_count": 16
+                },
+                {
+                  "key": "Employment and Labour Relations Court at Nairobi",
+                  "doc_count": 14
+                },
+                {
+                  "key": "High Court at Iten",
+                  "doc_count": 13
+                },
+                {
+                  "key": "High Court at Nyandarua",
+                  "doc_count": 12
+                },
+                {
+                  "key": "High Court at Kilgoris",
+                  "doc_count": 10
+                },
+                {
+                  "key": "High Court at Kapenguria",
+                  "doc_count": 9
+                },
+                {
+                  "key": "Supreme Court of Kenya",
+                  "doc_count": 9
+                },
+                {
+                  "key": "High Court at Isiolo",
+                  "doc_count": 5
+                },
+                {
+                  "key": "High Court at Kapsabet",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Employment and Labour Relations Court at Mombasa",
+                  "doc_count": 3
+                },
+                {
+                  "key": "Githongo Law Courts",
+                  "doc_count": 3
+                },
+                {
+                  "key": "High Court at Eldama Ravine",
+                  "doc_count": 3
+                },
+                {
+                  "key": "Makindu Law Courts",
+                  "doc_count": 3
+                },
+                {
+                  "key": "Maralal Law Courts",
+                  "doc_count": 3
+                },
+                {
+                  "key": "Court of Appeal at Busia",
+                  "doc_count": 2
+                },
+                {
+                  "key": "Employment and Labour Relations Court at Kakamega",
+                  "doc_count": 2
+                },
+                {
+                  "key": "Employment and Labour Relations Court at Nakuru",
+                  "doc_count": 2
+                },
+                {
+                  "key": "Environment and Land Court at Eldoret",
+                  "doc_count": 2
+                },
+                {
+                  "key": "Environment and Land Court at Machakos",
+                  "doc_count": 2
+                },
+                {
+                  "key": "Environment and Land Court at Mombasa",
+                  "doc_count": 2
+                },
+                {
+                  "key": "Environment and Land Court at Nairobi",
+                  "doc_count": 2
+                },
+                {
+                  "key": "Environment and Land Court at Nyamira",
+                  "doc_count": 2
+                },
+                {
+                  "key": "High Court at Maralal",
+                  "doc_count": 2
+                },
+                {
+                  "key": "Shanzu Law Courts",
+                  "doc_count": 2
+                },
+                {
+                  "key": "Chief Magistrate's Court (Milimani Law Courts)",
+                  "doc_count": 1
+                },
+                {
+                  "key": "Employment and Labour Relations Court at Kisumu",
+                  "doc_count": 1
+                },
+                {
+                  "key": "Employment and Labour Relations Court at Nyeri",
+                  "doc_count": 1
+                },
+                {
+                  "key": "Environment and Land Court at Garissa",
+                  "doc_count": 1
+                },
+                {
+                  "key": "Environment and Land Court at Kakamega",
+                  "doc_count": 1
+                },
+                {
+                  "key": "Environment and Land Court at Kisumu",
+                  "doc_count": 1
+                },
+                {
+                  "key": "Environment and Land Court at Kitale",
+                  "doc_count": 1
+                },
+                {
+                  "key": "Environment and Land Court at Malindi",
+                  "doc_count": 1
+                },
+                {
+                  "key": "Environment and Land Court at Meru",
+                  "doc_count": 1
+                },
+                {
+                  "key": "Environment and Land Court at Thika",
+                  "doc_count": 1
+                },
+                {
+                  "key": "High Court at Kwale",
+                  "doc_count": 1
+                },
+                {
+                  "key": "High Court at Makadara",
+                  "doc_count": 1
+                },
+                {
+                  "key": "Machakos Law Courts",
+                  "doc_count": 1
+                },
+                {
+                  "key": "Nakuru Law Courts",
+                  "doc_count": 1
+                },
+                {
+                  "key": "Vihiga Law Courts",
+                  "doc_count": 1
+                }
+              ]
+            }
+          },
+          "_filter_attorneys": {
+            "doc_count": 10160,
+            "attorneys": {
+              "doc_count_error_upper_bound": 3,
+              "sum_other_doc_count": 2781,
+              "buckets": [
+                {
+                  "key": "Mr. Momanyi",
+                  "doc_count": 22
+                },
+                {
+                  "key": "Miss Sigei",
+                  "doc_count": 20
+                },
+                {
+                  "key": "Mr Ngetich",
+                  "doc_count": 20
+                },
+                {
+                  "key": "Mr. Ngiri",
+                  "doc_count": 20
+                },
+                {
+                  "key": "No appearance",
+                  "doc_count": 16
+                },
+                {
+                  "key": "Mr. Mutua",
+                  "doc_count": 15
+                },
+                {
+                  "key": "Mrs. Kagiri",
+                  "doc_count": 15
+                },
+                {
+                  "key": "Ms Mogoi",
+                  "doc_count": 15
+                },
+                {
+                  "key": "Ms. Mati",
+                  "doc_count": 15
+                },
+                {
+                  "key": "Mutuma",
+                  "doc_count": 15
+                },
+                {
+                  "key": "Miss Akunja",
+                  "doc_count": 14
+                },
+                {
+                  "key": "Mr. Otieno",
+                  "doc_count": 14
+                },
+                {
+                  "key": "Ms. Chala",
+                  "doc_count": 14
+                },
+                {
+                  "key": "Miss Atina",
+                  "doc_count": 13
+                },
+                {
+                  "key": "Mr. Akula",
+                  "doc_count": 13
+                },
+                {
+                  "key": "Ms. Nandwa",
+                  "doc_count": 13
+                },
+                {
+                  "key": "Miss Mogoi",
+                  "doc_count": 12
+                },
+                {
+                  "key": "Ms Kagali",
+                  "doc_count": 12
+                },
+                {
+                  "key": "Present in person",
+                  "doc_count": 12
+                },
+                {
+                  "key": "Miss Gateru",
+                  "doc_count": 11
+                },
+                {
+                  "key": "Miss Nyauncho",
+                  "doc_count": 11
+                },
+                {
+                  "key": "Mr. Mugun",
+                  "doc_count": 11
+                },
+                {
+                  "key": "Mr. Mutuma",
+                  "doc_count": 11
+                },
+                {
+                  "key": "Ms. Tumaini",
+                  "doc_count": 11
+                },
+                {
+                  "key": "Machogu",
+                  "doc_count": 10
+                },
+                {
+                  "key": "Mr. Maragia",
+                  "doc_count": 10
+                },
+                {
+                  "key": "Ms. Macharia, Ass. DPP",
+                  "doc_count": 10
+                },
+                {
+                  "key": "M/s Atina",
+                  "doc_count": 9
+                },
+                {
+                  "key": "Mr Orinda",
+                  "doc_count": 9
+                },
+                {
+                  "key": "Mr. Chebii",
+                  "doc_count": 9
+                },
+                {
+                  "key": "Mr. Majale",
+                  "doc_count": 9
+                },
+                {
+                  "key": "Mr. Ngetich",
+                  "doc_count": 9
+                },
+                {
+                  "key": "Ms. Kagai, instructed by the Director of Public Prosecutions",
+                  "doc_count": 9
+                },
+                {
+                  "key": "Ms. Mwaniki",
+                  "doc_count": 9
+                },
+                {
+                  "key": "………………………:",
+                  "doc_count": 9
+                },
+                {
+                  "key": "Mr. Kihara",
+                  "doc_count": 8
+                },
+                {
+                  "key": "Mr. Masila",
+                  "doc_count": 8
+                },
+                {
+                  "key": "Ms Nandwa, Prosecution Counsel",
+                  "doc_count": 8
+                },
+                {
+                  "key": "M/s Sigei",
+                  "doc_count": 7
+                },
+                {
+                  "key": "Mburugu",
+                  "doc_count": 7
+                },
+                {
+                  "key": "Mr. Gacharia",
+                  "doc_count": 7
+                },
+                {
+                  "key": "Mr. Karanja",
+                  "doc_count": 7
+                },
+                {
+                  "key": "Mr. Majale (present)",
+                  "doc_count": 7
+                },
+                {
+                  "key": "Mr. Makura",
+                  "doc_count": 7
+                },
+                {
+                  "key": "Mr. Ondieki",
+                  "doc_count": 7
+                },
+                {
+                  "key": "Mrs. Ntarangwi",
+                  "doc_count": 7
+                },
+                {
+                  "key": "…………………………….:",
+                  "doc_count": 7
+                },
+                {
+                  "key": "M/s Aluda",
+                  "doc_count": 6
+                },
+                {
+                  "key": "Mamba",
+                  "doc_count": 6
+                },
+                {
+                  "key": "Miss Kibet",
+                  "doc_count": 6
+                },
+                {
+                  "key": "Miss Nyamosi",
+                  "doc_count": 6
+                },
+                {
+                  "key": "Miss Omondi",
+                  "doc_count": 6
+                },
+                {
+                  "key": "Mogere",
+                  "doc_count": 6
+                },
+                {
+                  "key": "Mr Mogikoyo",
+                  "doc_count": 6
+                },
+                {
+                  "key": "Mr. Chacha",
+                  "doc_count": 6
+                },
+                {
+                  "key": "Mr. Kakoi",
+                  "doc_count": 6
+                },
+                {
+                  "key": "Mr. Mamba",
+                  "doc_count": 6
+                },
+                {
+                  "key": "Mr. Ochieng",
+                  "doc_count": 6
+                },
+                {
+                  "key": "Ms Akunja",
+                  "doc_count": 6
+                },
+                {
+                  "key": "Ms Kagai",
+                  "doc_count": 6
+                },
+                {
+                  "key": "Ms Ratemo",
+                  "doc_count": 6
+                },
+                {
+                  "key": "Ms. Gateru",
+                  "doc_count": 6
+                },
+                {
+                  "key": "N/A",
+                  "doc_count": 6
+                },
+                {
+                  "key": "Saoli",
+                  "doc_count": 6
+                },
+                {
+                  "key": "Betty Rashid",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Miss Aluda",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Mr Kimunya",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Mr Oroni",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Mr Wamwayi",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Mr Wang'ondu",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Mr. Kaino",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Mr. Kimani",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Mr. Koech",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Mr. Mugambi",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Mr. Muriuki",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Mr. Mwangi",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Mr. Ndiema",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Mr. Omwenga",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Mr. Sirima",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Mr. Swaka",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Mr. Waweru",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Mr…………………………………………………",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Ms. Atina",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Ms. Chege",
+                  "doc_count": 5
+                },
+                {
+                  "key": "Musau",
+                  "doc_count": 5
+                },
+                {
+                  "key": "present in person",
+                  "doc_count": 5
+                },
+                {
+                  "key": "……………………………............................",
+                  "doc_count": 5
+                },
+                {
+                  "key": "……………………………:",
+                  "doc_count": 5
+                },
+                {
+                  "key": "M/s Kimiri",
+                  "doc_count": 4
+                },
+                {
+                  "key": "M/s Sidi",
+                  "doc_count": 4
+                },
+                {
+                  "key": "Machogu -",
+                  "doc_count": 4
+                },
+                {
+                  "key": "Miss Kimiri",
+                  "doc_count": 4
+                },
+                {
+                  "key": "Mocha",
+                  "doc_count": 4
+                },
+                {
+                  "key": "Mongare",
+                  "doc_count": 4
+                },
+                {
+                  "key": "Mr Kariuki",
+                  "doc_count": 4
+                },
+                {
+                  "key": "Mr Makura",
+                  "doc_count": 4
+                },
+                {
+                  "key": "Mr Maragia",
+                  "doc_count": 4
+                },
+                {
+                  "key": "Mr Mwangi",
+                  "doc_count": 4
+                },
+                {
+                  "key": "Mr Ondieki",
+                  "doc_count": 4
+                },
+                {
+                  "key": "Mr. Abwajo",
+                  "doc_count": 4
+                }
+              ]
+            }
+          },
+          "_filter_matter_type": {
+            "doc_count": 10160,
+            "matter_type": {
+              "doc_count_error_upper_bound": 0,
+              "sum_other_doc_count": 0,
+              "buckets": []
+            }
+          }
+        },
+        "cached_at": "2025-09-26T16:26:19.929770",
+        "search_params": {
+          "search_term": "Robbery with Violence",
+          "page": 2,
+          "page_size": 10,
+          "ai_enhancement_level": true,
+          "gpt_rerank_top_n": 10
+        },
+        "from_cache": false,
+        "ai_enhanced": true
+      },
+      "cached_at": "2025-09-26T16:26:19.973562",
+      "search_params": {
+        "search_term": "Robbery with Violence",
+        "page": 2,
+        "page_size": 10,
+        "ai_enhancement_level": true,
+        "gpt_rerank_top_n": 10
+      }
     }
   },
   "documents": {
@@ -83631,7 +85794,8 @@
         "934035ebf41c30212236d6ffc567f650",
         "b66cbea9f01346981f9f1f3c70de6e44",
         "d6e71991c2d9d94d821ffdc9ca8456e8",
-        "8b2b4856f4ccc8a739269689aa78d9d8"
+        "8b2b4856f4ccc8a739269689aa78d9d8",
+        "2b2c6e3ac6665f6dec63198f9727256a"
       ],
       "gpt_summary": null,
       "gpt_reasoning": "GPT analysis failed"
@@ -83934,7 +86098,8 @@
       },
       "cached_at": "2025-09-11T11:54:46.241885",
       "source_searches": [
-        "934035ebf41c30212236d6ffc567f650"
+        "934035ebf41c30212236d6ffc567f650",
+        "2b2c6e3ac6665f6dec63198f9727256a"
       ]
     },
     "565051": {
@@ -89551,7 +91716,8 @@
       },
       "cached_at": "2025-09-13T13:11:32.034640",
       "source_searches": [
-        "850612374f1cbcc4d1c7ee82cc631c7d"
+        "850612374f1cbcc4d1c7ee82cc631c7d",
+        "2b2c6e3ac6665f6dec63198f9727256a"
       ]
     },
     "385412": {
@@ -101430,12 +103596,396 @@
       ],
       "gpt_summary": null,
       "gpt_reasoning": "The case directly addresses issues of unfair termination and underpayments, which are central to the search query. It involves the same parties and legal principles, making it highly relevant as a legal precedent."
+    },
+    "440863": {
+      "data": {
+        "id": "440863",
+        "doc_type": "judgment",
+        "title": "Peter Ngure Mwangi    v    Republic [2014] KECA 405 (KLR)",
+        "date": "2014-07-31",
+        "year": 2014,
+        "jurisdiction": "Kenya",
+        "locality": null,
+        "citation": "Peter Ngure Mwangi    v    Republic [2014] KECA 405 (KLR)",
+        "expression_frbr_uri": "/akn/ke/judgment/keca/2014/405/eng@2014-07-31",
+        "work_frbr_uri": "/akn/ke/judgment/keca/2014/405",
+        "authors": null,
+        "matter_type": null,
+        "created_at": "2022-07-06T20:55:34.310561+00:00",
+        "case_number": [
+          "Criminal Appeal 44 of 2010"
+        ],
+        "judges": [],
+        "is_most_recent": true,
+        "alternative_names": [
+          "Peter Ngure Mwangi    v    Republic [2014] eKLR"
+        ],
+        "labels": [],
+        "topic_path_names": [],
+        "_score": 46.885517,
+        "_index": "kenyalaw_eng",
+        "nature": "Judgment",
+        "court": "Court of Appeal",
+        "highlight": {
+          "content": [
+            "with <mark>violence</mark>.",
+            "As such he was fully aware that he faced a charge of <mark>robbery</mark> with <mark>violence</mark>."
+          ]
+        },
+        "pages": [],
+        "provisions": [],
+        "outcome": [],
+        "registry": "Court of Appeal at Nairobi",
+        "explanation": null,
+        "raw": null,
+        "relevance": 0.0,
+        "summary": "No factual information available.",
+        "content_source": "search_api",
+        "facts_word_count": 0,
+        "relevance_source": "traditional"
+      },
+      "cached_at": "2025-09-26T16:26:19.973606",
+      "source_searches": [
+        "2b2c6e3ac6665f6dec63198f9727256a"
+      ]
+    },
+    "421560": {
+      "data": {
+        "id": "421560",
+        "doc_type": "judgment",
+        "title": "David Njuguna Wairimu v Republic [2010] KECA 495 (KLR)",
+        "date": "2010-06-18",
+        "year": 2010,
+        "jurisdiction": "Kenya",
+        "locality": null,
+        "citation": "David Njuguna Wairimu v Republic [2010] KECA 495 (KLR)",
+        "expression_frbr_uri": "/akn/ke/judgment/keca/2010/495/eng@2010-06-18",
+        "work_frbr_uri": "/akn/ke/judgment/keca/2010/495",
+        "authors": null,
+        "matter_type": null,
+        "created_at": "2022-10-19T17:05:32.296252+00:00",
+        "case_number": [
+          "Criminal Appeal 28 of 2009"
+        ],
+        "judges": [],
+        "is_most_recent": true,
+        "alternative_names": [
+          "David Njuguna Wairimu v Republic [2010] eKLR"
+        ],
+        "labels": [
+          "reported"
+        ],
+        "topic_path_names": [],
+        "_score": 44.39999,
+        "_index": "kenyalaw_eng",
+        "nature": "Judgment",
+        "court": "Court of Appeal",
+        "highlight": {
+          "content": [
+            "The particulars of the <mark>robbery</mark> with <mark>violence</mark> charge read as follows:- \n \n\t  ",
+            "It formed part of the particulars of the <mark>robbery</mark> with <mark>violence</mark> charge. "
+          ]
+        },
+        "pages": [],
+        "provisions": [],
+        "outcome": [],
+        "registry": "Court of Appeal at Kisumu",
+        "explanation": null,
+        "raw": null,
+        "relevance": 0.0,
+        "summary": "No factual information available.",
+        "content_source": "search_api",
+        "facts_word_count": 0,
+        "relevance_source": "traditional"
+      },
+      "cached_at": "2025-09-26T16:26:19.973617",
+      "source_searches": [
+        "2b2c6e3ac6665f6dec63198f9727256a"
+      ]
+    },
+    "593543": {
+      "data": {
+        "id": "593543",
+        "doc_type": "judgment",
+        "title": "Maitanyi v Republic [1986] KECA 39 (KLR)",
+        "date": "1986f-09-19",
+        "year": 1986,
+        "jurisdiction": "Kenya",
+        "locality": null,
+        "citation": "Maitanyi v Republic [1986] KECA 39 (KLR)",
+        "expression_frbr_uri": "/akn/ke/judgment/keca/1986/39/eng@1986-09-19",
+        "work_frbr_uri": "/akn/ke/judgment/keca/1986/39",
+        "authors": null,
+        "matter_type": null,
+        "created_at": "2022-06-28T17:35:22.426399+00:00",
+        "case_number": [
+          "Criminal Appeal 6 of 1986"
+        ],
+        "judges": [],
+        "is_most_recent": true,
+        "alternative_names": [
+          "Maitanyi v Republic [1986] eKLR"
+        ],
+        "labels": [
+          "reported"
+        ],
+        "topic_path_names": [],
+        "_score": 44.15668,
+        "_index": "kenyalaw_eng",
+        "nature": "Judgment",
+        "court": "Court of Appeal",
+        "highlight": {
+          "content": [
+            "Nairobi, Mbaya J) \n \n\t JUDGMENT \n \n\tThe appellant appeals against his conviction of <mark>robbery</mark>",
+            "with <mark>violence</mark> contrary to section 296(2) of the Penal Code (cap 63) and sentence"
+          ]
+        },
+        "pages": [],
+        "provisions": [],
+        "outcome": [],
+        "registry": "Court of Appeal at Nairobi",
+        "explanation": null,
+        "raw": null,
+        "relevance": 0.0,
+        "summary": "No factual information available.",
+        "content_source": "search_api",
+        "facts_word_count": 0,
+        "relevance_source": "traditional"
+      },
+      "cached_at": "2025-09-26T16:26:19.973622",
+      "source_searches": [
+        "2b2c6e3ac6665f6dec63198f9727256a"
+      ]
+    },
+    "506436": {
+      "data": {
+        "id": "506436",
+        "doc_type": "judgment",
+        "title": "James Kariuki Wagana v Republic [2018] KEHC 6157 (KLR)",
+        "date": "2018-06-21",
+        "year": 2018,
+        "jurisdiction": "Kenya",
+        "locality": null,
+        "citation": "James Kariuki Wagana v Republic [2018] KEHC 6157 (KLR)",
+        "expression_frbr_uri": "/akn/ke/judgment/kehc/2018/6157/eng@2018-06-21",
+        "work_frbr_uri": "/akn/ke/judgment/kehc/2018/6157",
+        "authors": null,
+        "matter_type": null,
+        "created_at": "2022-07-02T13:20:44.345820+00:00",
+        "case_number": [
+          "Criminal Appeal 48 of 2016"
+        ],
+        "judges": [
+          "EM Ngugi"
+        ],
+        "is_most_recent": true,
+        "alternative_names": [
+          "James Kariuki Wagana v Republic [2018] eKLR"
+        ],
+        "labels": [],
+        "topic_path_names": [],
+        "_score": 44.120834,
+        "_index": "kenyalaw_eng",
+        "nature": "Judgment",
+        "court": "High Court",
+        "highlight": {
+          "content": [
+            "First, he insisted that the ingredients of <mark>robbery</mark> with <mark>violence</mark> were not proved.",
+            "The Appellant was convicted of the offence of <mark>robbery</mark> with <mark>violence</mark>. "
+          ]
+        },
+        "pages": [],
+        "provisions": [],
+        "outcome": [],
+        "registry": "High Court at Nakuru",
+        "explanation": null,
+        "raw": null,
+        "relevance": 0.0,
+        "summary": "No factual information available.",
+        "content_source": "search_api",
+        "facts_word_count": 0,
+        "relevance_source": "traditional"
+      },
+      "cached_at": "2025-09-26T16:26:19.973625",
+      "source_searches": [
+        "2b2c6e3ac6665f6dec63198f9727256a"
+      ]
+    },
+    "421738": {
+      "data": {
+        "id": "421738",
+        "doc_type": "judgment",
+        "title": "Kiilu & another v Republic (Criminal Appeal 113 of 2001) [2005] KECA 335 (KLR) (18 February 2005) (Judgment)",
+        "date": "2005-02-18",
+        "year": 2005,
+        "jurisdiction": "Kenya",
+        "locality": null,
+        "citation": "Kiilu & another v Republic [2005] KECA 335 (KLR)",
+        "expression_frbr_uri": "/akn/ke/judgment/keca/2005/335/eng@2005-02-18",
+        "work_frbr_uri": "/akn/ke/judgment/keca/2005/335",
+        "authors": null,
+        "matter_type": null,
+        "created_at": "2022-10-20T13:50:37.402353+00:00",
+        "case_number": [
+          "Criminal Appeal 113 of 2001"
+        ],
+        "judges": [
+          "JWO Otieno",
+          "PK Tunoi",
+          "PN Waki"
+        ],
+        "is_most_recent": true,
+        "alternative_names": [
+          "Peter Kifue Kiilu & another v Republic [2005] eKLR"
+        ],
+        "labels": [
+          "reported"
+        ],
+        "topic_path_names": [
+          "Criminal Procedure"
+        ],
+        "_score": 43.32663,
+        "_index": "kenyalaw_eng",
+        "nature": "Judgment",
+        "court": "Court of Appeal",
+        "highlight": {
+          "content": [
+            "The two were jointly charged with the offence of <mark>Robbery</mark> with <mark>violence</mark> contrary to",
+            "In convicting the appellants of the offence of <mark>robbery</mark> with <mark>violence</mark> contrary to"
+          ]
+        },
+        "pages": [],
+        "provisions": [],
+        "outcome": [
+          "Allowed"
+        ],
+        "registry": "Court of Appeal at Eldoret",
+        "explanation": null,
+        "raw": null,
+        "relevance": 0.0,
+        "summary": "No factual information available.",
+        "content_source": "search_api",
+        "facts_word_count": 0,
+        "relevance_source": "traditional"
+      },
+      "cached_at": "2025-09-26T16:26:19.973629",
+      "source_searches": [
+        "2b2c6e3ac6665f6dec63198f9727256a"
+      ]
+    },
+    "557907": {
+      "data": {
+        "id": "557907",
+        "doc_type": "judgment",
+        "title": "Julius Kalewa Mutunga  v  Republic (Criminal Appeal 31 of 2005) [2006] KECA 79 (KLR) (27 October 2006) (Judgment)",
+        "date": "2006-10-27",
+        "year": 2006,
+        "jurisdiction": "Kenya",
+        "locality": null,
+        "citation": "Julius Kalewa Mutunga  v  Republic [2006] KECA 79 (KLR)",
+        "expression_frbr_uri": "/akn/ke/judgment/keca/2006/79/eng@2006-10-27",
+        "work_frbr_uri": "/akn/ke/judgment/keca/2006/79",
+        "authors": null,
+        "matter_type": null,
+        "created_at": "2022-06-30T18:30:35.484847+00:00",
+        "case_number": [
+          "Criminal Appeal 31 of 2005"
+        ],
+        "judges": [
+          "J Wakiaga"
+        ],
+        "is_most_recent": true,
+        "alternative_names": [],
+        "labels": [],
+        "topic_path_names": [],
+        "_score": 41.7104,
+        "_index": "kenyalaw_eng",
+        "nature": "Judgment",
+        "court": "Court of Appeal",
+        "highlight": {
+          "content": [
+            "Subsequently he had Kalewa charged with the offence of <mark>robbery</mark> with <mark>violence</mark> as stated",
+            "with <mark>violence</mark>. "
+          ]
+        },
+        "pages": [],
+        "provisions": [],
+        "outcome": [
+          "Dismissed"
+        ],
+        "registry": "Court of Appeal at Nyeri",
+        "explanation": null,
+        "raw": null,
+        "relevance": 0.0,
+        "summary": "No factual information available.",
+        "content_source": "search_api",
+        "facts_word_count": 0,
+        "relevance_source": "traditional"
+      },
+      "cached_at": "2025-09-26T16:26:19.973632",
+      "source_searches": [
+        "2b2c6e3ac6665f6dec63198f9727256a"
+      ]
+    },
+    "348152": {
+      "data": {
+        "id": "348152",
+        "doc_type": "judgment",
+        "title": "Kihonge v Republic (Criminal Appeal 30 of 2020) [2023] KEHC 26127 (KLR) (28 November 2023) (Judgment)",
+        "date": "2023-11-28",
+        "year": 2023,
+        "jurisdiction": "Kenya",
+        "locality": null,
+        "citation": "Kihonge v Republic [2023] KEHC 26127 (KLR)",
+        "expression_frbr_uri": "/akn/ke/judgment/kehc/2023/26127/eng@2023-11-28",
+        "work_frbr_uri": "/akn/ke/judgment/kehc/2023/26127",
+        "authors": null,
+        "matter_type": null,
+        "created_at": "2023-12-04T15:56:17.661313+00:00",
+        "case_number": [
+          "Criminal Appeal 30 of 2020"
+        ],
+        "judges": [
+          "CW Githua"
+        ],
+        "is_most_recent": true,
+        "alternative_names": [],
+        "labels": [],
+        "topic_path_names": [],
+        "_score": 41.356083,
+        "_index": "kenyalaw_eng",
+        "nature": "Judgment",
+        "court": "High Court",
+        "highlight": {
+          "content": [
+            "struck or used any other <mark>violence</mark> on any person. \n \n \n 16.",
+            "with <mark>violence</mark>."
+          ]
+        },
+        "pages": [],
+        "provisions": [],
+        "outcome": [
+          "Dismissed"
+        ],
+        "registry": "High Court at Murang'a",
+        "explanation": null,
+        "raw": null,
+        "relevance": 0.0,
+        "summary": "No factual information available.",
+        "content_source": "search_api",
+        "facts_word_count": 0,
+        "relevance_source": "traditional"
+      },
+      "cached_at": "2025-09-26T16:26:19.973635",
+      "source_searches": [
+        "2b2c6e3ac6665f6dec63198f9727256a"
+      ]
     }
   },
   "metadata": {
     "created_at": "2025-09-11T08:46:14.117645",
-    "last_updated": "2025-09-21T13:54:20.243124",
-    "total_searches": 95,
-    "total_documents": 311
+    "last_updated": "2025-09-30T05:54:46.012787",
+    "total_searches": 96,
+    "total_documents": 318
   }
 }

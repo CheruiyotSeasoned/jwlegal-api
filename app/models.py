@@ -1,7 +1,9 @@
 from sqlalchemy import Column, Integer, String, Text, DateTime, Boolean, ForeignKey, Enum, Float, Date, DECIMAL, JSON, BigInteger
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
+from sqlalchemy.orm import Session
 from app.database import Base
+from datetime import datetime
 import enum
 import uuid
 
@@ -52,7 +54,12 @@ class CaseStatus(str, enum.Enum):
     CLOSED = "closed"
     CANCELLED = "cancelled"
     ON_HOLD = "on-hold"
-
+class RequestType(enum.Enum):
+    LEGAL_OPINION = "legal_opinion"
+    CASE_ANALYSIS = "case_analysis"
+    COMPLIANCE_REVIEW = "compliance_review"
+    CONTRACT_REVIEW = "contract_review"
+    LEGISLATION_ANALYSIS = "legislation_analysis"
 class UrgencyLevel(str, enum.Enum):
     LOW = "low"
     MEDIUM = "medium"
@@ -145,6 +152,8 @@ class MessageType(str, enum.Enum):
     AUDIO = "audio"
     VIDEO = "video"
     SYSTEM = "system"
+    ASSISTANT = "assistant"
+    USER = "user"
 
 class AppointmentType(str, enum.Enum):
     CONSULTATION = "consultation"
@@ -934,3 +943,82 @@ class APIAccessLog(Base):
     request_data = Column(JSON)
     response_data = Column(JSON)
     created_at = Column(DateTime, default=func.now(), index=True)
+class ChatMessage(Base):
+    __tablename__ = "chat_messages"
+    
+    id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    conversation_id = Column(String(36), ForeignKey("research_conversations.id"), nullable=False)
+    user_id = Column(String(36), ForeignKey("users.id"), nullable=False)
+    message_type = Column(Enum("user", "assistant", name="message_type"), nullable=False)
+    content = Column(Text, nullable=False)
+    request_type = Column(Enum("search", "analysis", name="request_type"), nullable=True)
+    timestamp = Column(DateTime, default=datetime.utcnow)
+
+    # Relationships
+    conversation = relationship("ResearchConversation", back_populates="messages")
+    user = relationship("User")
+    analysis_results = relationship("AnalysisResult", back_populates="message", cascade="all, delete-orphan")
+    attachments = relationship("MessageAttachment", backref="message", cascade="all, delete-orphan")
+
+
+class ResearchConversation(Base):
+    __tablename__ = "research_conversations"
+    
+    id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    user_id = Column(String(36), ForeignKey("users.id"), nullable=False)
+    title = Column(String(200), nullable=False)
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    
+    # Relationships
+    messages = relationship("ChatMessage", back_populates="conversation", cascade="all, delete-orphan")
+    user = relationship("User")
+
+
+class MessageAttachment(Base):
+    __tablename__ = "message_attachments"
+    
+    id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    message_id = Column(String(36), ForeignKey("chat_messages.id"), nullable=False)
+    file_name = Column(String(255), nullable=False)
+    file_path = Column(String(500), nullable=False)
+    file_type = Column(String(100), nullable=False)
+    file_size = Column(Integer, nullable=False)
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+
+class ResearchRequest(Base):
+    __tablename__ = "research_requests"
+
+    id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    user_id = Column(String(36), ForeignKey("users.id"), nullable=False)
+    request_type = Column(Enum("search", "analysis", name="request_type"), nullable=False)
+    created_at = Column(DateTime, default=datetime.utcnow)
+    content = Column(Text, nullable=False)
+
+    # Relationships
+    analysis_results = relationship("AnalysisResult", back_populates="research_request", cascade="all, delete-orphan")
+
+
+class AnalysisResult(Base):
+    __tablename__ = "analysis_results"
+    
+    id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    message_id = Column(String(36), ForeignKey("chat_messages.id"), nullable=False)
+    research_request_id = Column(String(36), ForeignKey("research_requests.id"), nullable=True)
+
+    summary = Column(Text, nullable=True)
+    key_findings = Column(JSON, nullable=True)       # JSON object
+    legal_position = Column(Text, nullable=True)
+    recommendations = Column(JSON, nullable=True)   # JSON object
+    risks = Column(JSON, nullable=True)             # JSON object
+    precedents = Column(JSON, nullable=True)        # JSON object
+    statutes = Column(JSON, nullable=True)          # JSON object
+    regulations = Column(JSON, nullable=True)       # JSON object
+    related_cases = Column(JSON, nullable=True)     # JSON object
+    full_analysis = Column(Text, nullable=True)
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+    # Relationships
+    message = relationship("ChatMessage", back_populates="analysis_results")
+    research_request = relationship("ResearchRequest", back_populates="analysis_results")

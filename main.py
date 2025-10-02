@@ -14,7 +14,6 @@ from app.admin.routes import router as admin_router
 from app.kenyalaw.routes import router as kenyalaw_router
 from app.gpt.routes import router as gpt_router
 from app.legalresearch.routes import router as legalresearch_router
-from app.rag.routes import router as rag_router
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 # Create database tables
 Base.metadata.create_all(bind=engine)
@@ -59,7 +58,6 @@ app.include_router(admin_router)
 app.include_router(kenyalaw_router)
 app.include_router(gpt_router)
 app.include_router(legalresearch_router)
-app.include_router(rag_router)
 # Import and include new routers
 try:
     from app.documents.routes import router as documents_router
